@@ -2,7 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Outfit, JetBrains_Mono } from 'next/font/google';
 import { SITE } from '@/lib/constants';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
+// @ts-ignore
 import './globals.css';
+import { BackToTopButton } from '@/components/sections/BackToTopButton';
 
 const display = Cormorant_Garamond({
   subsets: ['latin'],
@@ -26,11 +28,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE.name} — ${SITE.tagline}`,
+  title: `${SITE.name} - ${SITE.tagline}`,
   description: SITE.description,
   metadataBase: new URL(SITE.url),
   openGraph: {
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
@@ -39,14 +41,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.description,
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: [
-      { url: '/icon.png', type: 'image/png' },
-    ],
+    icon: [{ url: '/icon.png', type: 'image/png' }],
     apple: '/icon.png',
     shortcut: '/icon.png',
   },
@@ -65,7 +65,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="min-h-screen overflow-x-hidden">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <BackToTopButton />
+        </LanguageProvider>
       </body>
     </html>
   );

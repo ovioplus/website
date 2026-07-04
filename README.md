@@ -1,6 +1,6 @@
 # OvioPlus Website
 
-The marketing site for [OvioPlus](https://ovioplus.ai) — an AI receptionist for restaurants.
+The marketing site for [OvioPlus](https://ovioplus.ai) Your AI receptionist.
 
 ## Stack
 
