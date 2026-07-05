@@ -59,7 +59,7 @@ export function Footer() {
         {/* ── Newsletter Banner ─────────────────────────────────── */}
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-6 sm:p-8 md:p-10 lg:p-14 mb-16 shadow-xl shadow-brand-cyan/20">
           {/* Mobile: illustration on top, text below · Desktop: side by side, centered */}
-          <div className="flex flex-col lg:grid lg:grid-cols-[auto_auto] gap-8 lg:gap-24 xl:gap-32 items-center lg:justify-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-[auto_auto] gap-6 sm:gap-8 lg:gap-24 xl:gap-32 items-center lg:justify-center">
             {/* Illustration — shown at all sizes but smaller on mobile */}
             <div className="flex flex-shrink-0 items-center justify-center pointer-events-none">
               <AiAgentIllustration />
@@ -67,7 +67,7 @@ export function Footer() {
 
             {/* Text + form — full width on mobile so text isn't awkwardly centered */}
             <div className="w-full lg:w-auto lg:max-w-none text-center lg:text-left">
-              <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
                 {t.footer.newsletter.title}
               </h3>
               <p className="text-white/85 text-sm sm:text-base md:text-lg mb-6 lg:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -81,7 +81,7 @@ export function Footer() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="flex items-center gap-3 bg-white/15 backdrop-blur-sm rounded-full px-5 py-3 max-w-md"
+                    className="flex items-center gap-3 bg-white/15 backdrop-blur-sm rounded-2xl sm:rounded-full px-5 py-3 max-w-md w-full sm:w-auto mx-auto lg:mx-0 text-left"
                   >
                     <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0" />
                     <div>
@@ -95,9 +95,9 @@ export function Footer() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onSubmit={submitNewsletter}
-                    className="w-full flex flex-col sm:flex-row items-center gap-2 bg-white/95 rounded-full p-1.5 max-w-md mx-auto lg:mx-0 shadow-lg"
+                    className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-2 bg-white/95 rounded-2xl sm:rounded-full p-2 sm:p-1.5 max-w-md mx-auto lg:mx-0 shadow-lg"
                   >
-                    <div className="flex items-center gap-2 flex-1 w-full pl-4">
+                    <div className="flex items-center gap-2 flex-1 w-full px-2 sm:pl-4 sm:pr-0">
                       <Mail className="w-4 h-4 text-text-muted flex-shrink-0" />
                       <input
                         type="email"
@@ -111,7 +111,7 @@ export function Footer() {
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className="w-full sm:w-auto flex-shrink-0 inline-flex items-center justify-center gap-1.5 rounded-full bg-indigo-500 text-white px-5 py-2.5 font-semibold text-sm hover:bg-indigo-600 hover:shadow-md hover:shadow-indigo-500/40 transition-all disabled:opacity-70"
+                      className="w-full sm:w-auto flex-shrink-0 inline-flex items-center justify-center gap-1.5 rounded-xl sm:rounded-full bg-indigo-500 text-white px-5 py-2.5 font-semibold text-sm hover:bg-indigo-600 hover:shadow-md hover:shadow-indigo-500/40 transition-all disabled:opacity-70"
                     >
                       {status === 'sending' ? (
                         <Loader2 className="w-4 h-4 animate-spin" />
@@ -139,14 +139,14 @@ export function Footer() {
         {/* ── Main columns ────────────────────────────────────── */}
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
           {/* Brand column */}
-          <div className="col-span-2 lg:col-span-4">
+          <div className="col-span-2 lg:col-span-4 flex flex-col md:items-center md:text-center lg:items-start lg:text-left">
             <Logo variant="icon" size={44} />
             <p className="mt-5 max-w-xs text-text-secondary leading-relaxed text-sm">
               {t.footer.tagline}
             </p>
 
             {/* Social icons */}
-            <div className="mt-6 flex items-center gap-2">
+            <div className="mt-6 flex items-center gap-2 md:justify-center lg:justify-start">
               <SocialLink href={COMPANY.socials.linkedin} label="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                   <path d="M4.98 3.5C4.98 4.881 3.87 6 2.5 6S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.52v14H.24V8zm7.05 0h4.32v2.06h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V22h-4.5v-6.16c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.26V22H7.29V8z"/>
@@ -178,7 +178,7 @@ export function Footer() {
           </div>
 
           {/* Product column */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex flex-col md:items-center md:text-center lg:items-start lg:text-left">
             <h4 className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted mb-4">
               {t.footer.product}
             </h4>
@@ -194,7 +194,7 @@ export function Footer() {
           </div>
 
           {/* Company column */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex flex-col md:items-center md:text-center lg:items-start lg:text-left">
             <h4 className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted mb-4">
               {t.footer.company}
             </h4>
@@ -207,7 +207,7 @@ export function Footer() {
           </div>
 
           {/* Legal column */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex flex-col md:items-center md:text-center lg:items-start lg:text-left">
             <h4 className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted mb-4">
               {t.footer.legal}
             </h4>
@@ -221,25 +221,25 @@ export function Footer() {
           </div>
 
           {/* Contact column */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex flex-col md:items-center md:text-center lg:items-start lg:text-left">
             <h4 className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted mb-4">
               {t.footer.contactUs}
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`} className="flex items-start gap-2.5 text-sm text-text-secondary hover:text-brand-cyan transition-colors group">
-                  <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-cyan" />
+                <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`} className="flex items-start md:items-center md:justify-center lg:items-start lg:justify-start gap-2.5 text-sm text-text-secondary hover:text-brand-cyan transition-colors group">
+                  <Phone className="w-4 h-4 mt-0.5 md:mt-0 lg:mt-0.5 flex-shrink-0 text-brand-cyan" />
                   <span>{COMPANY.phone}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${COMPANY.email}`} className="flex items-start gap-2.5 text-sm text-text-secondary hover:text-brand-cyan transition-colors">
-                  <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-cyan" />
+                <a href={`mailto:${COMPANY.email}`} className="flex items-start md:items-center md:justify-center lg:items-start lg:justify-start gap-2.5 text-sm text-text-secondary hover:text-brand-cyan transition-colors">
+                  <Mail className="w-4 h-4 mt-0.5 md:mt-0 lg:mt-0.5 flex-shrink-0 text-brand-cyan" />
                   <span>{COMPANY.email}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-2.5 text-sm text-text-secondary">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-cyan" />
+              <li className="flex items-start md:items-center md:justify-center lg:items-start lg:justify-start gap-2.5 text-sm text-text-secondary">
+                <MapPin className="w-4 h-4 mt-0.5 md:mt-0 lg:mt-0.5 flex-shrink-0 text-brand-cyan" />
                 <span>{COMPANY.address}</span>
               </li>
             </ul>
@@ -308,7 +308,7 @@ function SocialLink({
  */
 function AiAgentIllustration() {
   return (
-    <div className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52 xl:w-60 xl:h-60">
+    <div className="relative w-32 h-32 sm:w-44 sm:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60">
       {/* Soft glass card behind */}
       <div className="absolute inset-0 rounded-[2rem] bg-white/15 border border-white/25 backdrop-blur-sm shadow-2xl shadow-slate-900/10" />
 
