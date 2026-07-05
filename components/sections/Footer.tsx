@@ -57,20 +57,20 @@ export function Footer() {
     <footer className="relative pt-20 pb-8">
       <div className="container-page">
         {/* ── Newsletter Banner ─────────────────────────────────── */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-8 md:p-12 lg:p-14 mb-16 shadow-xl shadow-brand-cyan/20">
-          {/* Illustration left, text right — whole group centered in the section */}
-          <div className="grid lg:grid-cols-[auto_auto] gap-10 lg:gap-24 xl:gap-32 items-center justify-center">
-            {/* LEFT — AI Agent illustration */}
-            <div className="hidden lg:flex flex-shrink-0 items-center justify-center pointer-events-none order-1">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-6 sm:p-8 md:p-10 lg:p-14 mb-16 shadow-xl shadow-brand-cyan/20">
+          {/* Mobile: illustration on top, text below · Desktop: side by side, centered */}
+          <div className="flex flex-col lg:grid lg:grid-cols-[auto_auto] gap-8 lg:gap-24 xl:gap-32 items-center lg:justify-center">
+            {/* Illustration — shown at all sizes but smaller on mobile */}
+            <div className="flex flex-shrink-0 items-center justify-center pointer-events-none">
               <AiAgentIllustration />
             </div>
 
-            {/* RIGHT — text + form */}
-            <div className="order-2 lg:max-w-none">
-              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
+            {/* Text + form — full width on mobile so text isn't awkwardly centered */}
+            <div className="w-full lg:w-auto lg:max-w-none text-center lg:text-left">
+              <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
                 {t.footer.newsletter.title}
               </h3>
-              <p className="text-white/85 text-base md:text-lg mb-8 leading-relaxed max-w-xl">
+              <p className="text-white/85 text-sm sm:text-base md:text-lg mb-6 lg:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 {t.footer.newsletter.subtitle}
               </p>
 
@@ -95,7 +95,7 @@ export function Footer() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onSubmit={submitNewsletter}
-                    className="flex flex-col sm:flex-row items-center gap-2 bg-white/95 rounded-full p-1.5 max-w-md shadow-lg"
+                    className="w-full flex flex-col sm:flex-row items-center gap-2 bg-white/95 rounded-full p-1.5 max-w-md mx-auto lg:mx-0 shadow-lg"
                   >
                     <div className="flex items-center gap-2 flex-1 w-full pl-4">
                       <Mail className="w-4 h-4 text-text-muted flex-shrink-0" />
@@ -127,11 +127,11 @@ export function Footer() {
               </AnimatePresence>
 
               {status === 'error' && (
-                <p className="mt-3 text-white/90 text-xs max-w-md pl-5">{t.footer.newsletter.errorMessage}</p>
+                <p className="mt-3 text-white/90 text-xs max-w-md mx-auto lg:mx-0 lg:pl-5">{t.footer.newsletter.errorMessage}</p>
               )}
 
-              {/* Note — nudged slightly right so it aligns with the input text inside the pill */}
-              <p className="mt-4 text-white/70 text-xs max-w-md pl-5">{t.footer.newsletter.note}</p>
+              {/* Note — centered on mobile, aligned with input text on desktop */}
+              <p className="mt-4 text-white/70 text-xs max-w-md mx-auto lg:mx-0 lg:pl-5">{t.footer.newsletter.note}</p>
             </div>
           </div>
         </div>
@@ -308,7 +308,7 @@ function SocialLink({
  */
 function AiAgentIllustration() {
   return (
-    <div className="relative w-52 h-52 xl:w-60 xl:h-60">
+    <div className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52 xl:w-60 xl:h-60">
       {/* Soft glass card behind */}
       <div className="absolute inset-0 rounded-[2rem] bg-white/15 border border-white/25 backdrop-blur-sm shadow-2xl shadow-slate-900/10" />
 
