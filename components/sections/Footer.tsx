@@ -2,19 +2,20 @@
 
 import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Loader2, Send } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { SITE } from '@/lib/constants';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { openCookiePreferences } from '@/components/ui/CookieBanner';
+import { FEATURES } from '@/lib/config';
 
 /* ─────────────────────────────────────────────────────────────
    Company info — replace these placeholders with real values
    ───────────────────────────────────────────────────────────── */
 const COMPANY = {
-  phone: '+39 02 1234 5678',        // ← replace with real phone
-  email: 'hello@ovioplus.com',
-  address: 'Via Roma 42 · 43121 Parma · Italia',   // ← replace with real address
+  phone: '+39 3517372436',        // ← replace with real phone
+  email: 'contact@ovioplus.com',
+  address: 'Via Leopardi 11 · 43125 Parma · Italia',   // ← replace with real address
   socials: {
     // Fill these when accounts are live — use '#' for now
     twitter: 'https://twitter.com/ovioplus',
@@ -56,31 +57,20 @@ export function Footer() {
     <footer className="relative pt-20 pb-8">
       <div className="container-page">
         {/* ── Newsletter Banner ─────────────────────────────────── */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-8 md:p-10 lg:p-12 mb-16 shadow-xl shadow-brand-cyan/20">
-          <div className="grid lg:grid-cols-[auto_auto] gap-8 lg:gap-20 xl:gap-24 items-center justify-center">
-            {/* LEFT — image with circular white backdrop
-                Drop your image at: /public/newsletter-illustration.png */}
-            <div className="hidden lg:flex items-center justify-center pointer-events-none flex-shrink-0">
-              <div className="relative w-56 h-56 xl:w-64 xl:h-64 flex items-center justify-center">
-                {/* Solid white circular backdrop with soft shadow ring */}
-                <div className="absolute inset-0 rounded-full bg-white shadow-xl shadow-slate-900/10" />
-                <img
-                  src="/newsletter-illustration.png"
-                  alt=""
-                  className="relative w-4/5 h-4/5 object-contain"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display = 'none';
-                  }}
-                />
-              </div>
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-8 md:p-12 lg:p-14 mb-16 shadow-xl shadow-brand-cyan/20">
+          {/* Illustration left, text right — whole group centered in the section */}
+          <div className="grid lg:grid-cols-[auto_auto] gap-10 lg:gap-24 xl:gap-32 items-center justify-center">
+            {/* LEFT — AI Agent illustration */}
+            <div className="hidden lg:flex flex-shrink-0 items-center justify-center pointer-events-none order-1">
+              <AiAgentIllustration />
             </div>
 
             {/* RIGHT — text + form */}
-            <div className="w-full">
-              <h3 className="font-display text-3xl md:text-4xl font-semibold text-white leading-tight mb-3 text-balance">
+            <div className="order-2 lg:max-w-none">
+              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
                 {t.footer.newsletter.title}
               </h3>
-              <p className="text-white/85 text-base md:text-lg mb-8 leading-relaxed">
+              <p className="text-white/85 text-base md:text-lg mb-8 leading-relaxed max-w-xl">
                 {t.footer.newsletter.subtitle}
               </p>
 
@@ -105,7 +95,7 @@ export function Footer() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onSubmit={submitNewsletter}
-                    className="w-full max-w-md flex flex-col sm:flex-row items-center gap-2 bg-white/95 rounded-full p-1.5 shadow-lg"
+                    className="flex flex-col sm:flex-row items-center gap-2 bg-white/95 rounded-full p-1.5 max-w-md shadow-lg"
                   >
                     <div className="flex items-center gap-2 flex-1 w-full pl-4">
                       <Mail className="w-4 h-4 text-text-muted flex-shrink-0" />
@@ -137,10 +127,11 @@ export function Footer() {
               </AnimatePresence>
 
               {status === 'error' && (
-                <p className="mt-3 text-white/90 text-xs">{t.footer.newsletter.errorMessage}</p>
+                <p className="mt-3 text-white/90 text-xs max-w-md pl-5">{t.footer.newsletter.errorMessage}</p>
               )}
 
-              <p className="mt-4 text-white/70 text-xs">{t.footer.newsletter.note}</p>
+              {/* Note — nudged slightly right so it aligns with the input text inside the pill */}
+              <p className="mt-4 text-white/70 text-xs max-w-md pl-5">{t.footer.newsletter.note}</p>
             </div>
           </div>
         </div>
@@ -194,7 +185,9 @@ export function Footer() {
             <ul className="space-y-3">
               <FooterLink href="/#features">{t.footer.productLinks.features}</FooterLink>
               <FooterLink href="/#how">{t.footer.productLinks.how}</FooterLink>
-              <FooterLink href="/#pricing">{t.footer.productLinks.pricing}</FooterLink>
+              {FEATURES.showPricing && (
+                <FooterLink href="/#pricing">{t.footer.productLinks.pricing}</FooterLink>
+              )}
               <FooterLink href="/#faq">{t.footer.productLinks.faq}</FooterLink>
               <FooterLink href="/#contact">{t.footer.productLinks.demo}</FooterLink>
             </ul>
@@ -305,5 +298,96 @@ function SocialLink({
     >
       {children}
     </a>
+  );
+}
+
+/**
+ * AI Agent illustration — an elegant, abstract SVG representation
+ * of an AI receptionist: a soft avatar with headset + floating chat
+ * bubbles + subtle sparkles. Sits inside a soft glass badge.
+ */
+function AiAgentIllustration() {
+  return (
+    <div className="relative w-52 h-52 xl:w-60 xl:h-60">
+      {/* Soft glass card behind */}
+      <div className="absolute inset-0 rounded-[2rem] bg-white/15 border border-white/25 backdrop-blur-sm shadow-2xl shadow-slate-900/10" />
+
+      {/* Illustration */}
+      <svg viewBox="0 0 240 240" className="relative w-full h-full" aria-hidden="true">
+        <defs>
+          <linearGradient id="agent-body" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+            <stop offset="100%" stopColor="#E8F4FB" stopOpacity="1" />
+          </linearGradient>
+          <linearGradient id="agent-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#5CC4F0" />
+            <stop offset="100%" stopColor="#2CABE6" />
+          </linearGradient>
+        </defs>
+
+        {/* Halo ring behind agent */}
+        <circle cx="120" cy="118" r="70" fill="none" stroke="#ffffff" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="4 6" />
+
+        {/* Headset — top arc */}
+        <path
+          d="M 66 118 Q 66 66 120 66 Q 174 66 174 118"
+          fill="none"
+          stroke="url(#agent-accent)"
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+
+        {/* Left ear cup */}
+        <rect x="56" y="112" width="20" height="30" rx="8" fill="url(#agent-accent)" />
+        {/* Right ear cup */}
+        <rect x="164" y="112" width="20" height="30" rx="8" fill="url(#agent-accent)" />
+
+        {/* Mic arm */}
+        <path
+          d="M 176 138 Q 176 158 156 160"
+          fill="none"
+          stroke="url(#agent-accent)"
+          strokeWidth="5"
+          strokeLinecap="round"
+        />
+        <circle cx="154" cy="160" r="4" fill="url(#agent-accent)" />
+
+        {/* Avatar face (soft rounded rectangle) */}
+        <rect x="82" y="94" width="76" height="70" rx="24" fill="url(#agent-body)" />
+
+        {/* Eyes — friendly closed arcs */}
+        <path d="M 100 128 Q 106 122 112 128" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
+        <path d="M 128 128 Q 134 122 140 128" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+        {/* Smile */}
+        <path d="M 108 144 Q 120 152 132 144" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+        {/* Floating chat bubble — top left */}
+        <g>
+          <path d="M 30 46 Q 30 34 42 34 L 76 34 Q 88 34 88 46 L 88 58 Q 88 70 76 70 L 52 70 L 42 78 L 46 70 L 42 70 Q 30 70 30 58 Z" fill="#ffffff" opacity="0.95" />
+          <circle cx="46" cy="52" r="2.5" fill="#2CABE6" />
+          <circle cx="56" cy="52" r="2.5" fill="#2CABE6" />
+          <circle cx="66" cy="52" r="2.5" fill="#2CABE6" />
+        </g>
+
+        {/* Floating chat bubble — bottom right */}
+        <g>
+          <path d="M 152 190 Q 152 182 160 182 L 202 182 Q 210 182 210 190 L 210 206 Q 210 214 202 214 L 172 214 L 164 220 L 168 214 L 160 214 Q 152 214 152 206 Z" fill="#FFA042" opacity="0.9" />
+          <circle cx="168" cy="198" r="2.5" fill="#ffffff" />
+          <circle cx="181" cy="198" r="2.5" fill="#ffffff" />
+          <circle cx="194" cy="198" r="2.5" fill="#ffffff" />
+        </g>
+
+        {/* Sparkles */}
+        <g fill="#ffffff" opacity="0.95">
+          <path d="M 200 60 L 203 66 L 209 68 L 203 70 L 200 76 L 197 70 L 191 68 L 197 66 Z" />
+          <path d="M 40 178 L 42 183 L 47 185 L 42 187 L 40 192 L 38 187 L 33 185 L 38 183 Z" />
+        </g>
+
+        {/* Small dot accents */}
+        <circle cx="216" cy="118" r="3" fill="#ffffff" opacity="0.6" />
+        <circle cx="24" cy="110" r="3" fill="#ffffff" opacity="0.6" />
+      </svg>
+    </div>
   );
 }

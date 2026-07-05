@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_FIELD_LENGTH = 1000;
 
-const TO_ADDRESS = process.env.CONTACT_TO ?? 'hello@ovioplus.com';
+const TO_ADDRESS = process.env.CONTACT_TO ?? 'contact@ovioplus.com';
 const FROM_ADDRESS = process.env.CONTACT_FROM ?? 'OvioPlus <noreply@ovioplus.com>';
 
 export async function POST(req: Request) {

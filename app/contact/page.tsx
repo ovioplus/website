@@ -7,8 +7,8 @@ import { Footer } from '@/components/sections/Footer';
 import { PageShell } from '@/components/sections/PageShell';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-const OFFICE_PHONE = '+39 02 1234 5678';
-const OFFICE_EMAIL = 'hello@ovioplus.com';
+const OFFICE_PHONE = '+39 3517372436';
+const OFFICE_EMAIL = 'contact@ovioplus.com';
 
 const methodIcons = [Calendar, Mail, Phone];
 

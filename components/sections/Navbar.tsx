@@ -6,6 +6,7 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { FEATURES } from '@/lib/config';
 import { cn } from '@/lib/utils';
 
 export function Navbar() {
@@ -20,12 +21,13 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Nav links respect FEATURES toggles — hidden sections are also hidden from nav
   const navLinks = [
-    { label: t.nav.features, href: '/#features' },
-    { label: t.nav.how, href: '/#how' },
-    { label: t.nav.pricing, href: '/#pricing' },
-    { label: t.nav.faq, href: '/#faq' },
-  ];
+    { label: t.nav.features, href: '/#features', show: true },
+    { label: t.nav.how, href: '/#how', show: true },
+    { label: t.nav.pricing, href: '/#pricing', show: FEATURES.showPricing },
+    { label: t.nav.faq, href: '/#faq', show: true },
+  ].filter((l) => l.show);
 
   return (
     <>

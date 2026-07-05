@@ -21,14 +21,14 @@ export function CTA() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="mailto:hello@ovioplus.com?subject=Demo%20request"
+                  href="mailto:contact@ovioplus.com?subject=Demo%20request"
                   className="btn-primary group"
                 >
                   Book a demo
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
-                <a href="mailto:hello@ovioplus.com" className="btn-ghost">
-                  hello@ovioplus.com
+                <a href="mailto:contact@ovioplus.com" className="btn-ghost">
+                  contact@ovioplus.com
                 </a>
               </div>
             </div>

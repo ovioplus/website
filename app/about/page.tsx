@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Team */}
+          {/* Vision */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,23 +81,28 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="mb-20 md:mb-24"
           >
-            <div className="rounded-3xl bg-gradient-to-br from-brand-cyan/8 via-white to-brand-sky-light border border-line p-10 md:p-16 text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary mb-4">
-                {p.team.heading}
-              </h2>
-              <p className="text-lg text-text-secondary leading-relaxed max-w-xl mx-auto">
-                {p.team.body}
-              </p>
-              {/* TODO: replace with real team grid once we have photos */}
-              <div className="mt-10 flex justify-center gap-3">
-                {[1, 2, 3].map((n) => (
-                  <div
-                    key={n}
-                    className="w-14 h-14 rounded-full bg-white border-2 border-line flex items-center justify-center text-text-muted text-xs font-mono"
-                  >
-                    {n}
-                  </div>
-                ))}
+            <div className="relative rounded-3xl bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-10 md:p-16 text-center overflow-hidden shadow-xl shadow-brand-cyan/20">
+              {/* Decorative sparkle SVGs — pure CSS, GPU-cheap */}
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-8 left-12 w-2 h-2 rounded-full bg-white/40" />
+                <div className="absolute top-16 right-16 w-3 h-3 rounded-full bg-white/25" />
+                <div className="absolute bottom-12 left-1/4 w-1.5 h-1.5 rounded-full bg-white/50" />
+                <div className="absolute bottom-20 right-1/3 w-2 h-2 rounded-full bg-white/30" />
+              </div>
+
+              <div className="relative">
+                <span className="inline-block font-mono text-xs uppercase tracking-[0.18em] text-white/80 mb-4">
+                  {p.vision.eyebrow}
+                </span>
+                <h2 className="font-display text-3xl md:text-5xl font-semibold text-white mb-4 text-balance leading-tight">
+                  {p.vision.heading}
+                </h2>
+                <p className="font-display italic text-xl md:text-2xl text-white/95 mb-6 max-w-xl mx-auto">
+                  &ldquo;{p.vision.slogan}&rdquo;
+                </p>
+                <p className="text-white/85 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                  {p.vision.body}
+                </p>
               </div>
             </div>
           </motion.section>

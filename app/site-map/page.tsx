@@ -21,6 +21,7 @@ import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
 import { PageShell } from '@/components/sections/PageShell';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { FEATURES } from '@/lib/config';
 
 export default function SitemapPage() {
   const { t } = useLanguage();
@@ -30,13 +31,13 @@ export default function SitemapPage() {
     {
       title: p.sections.main,
       links: [
-        { icon: Home, label: 'Home', href: '/', desc: 'Overview + hero + product' },
-        { icon: Sparkles, label: t.nav.features, href: '/#features', desc: '3 channels: web · chat · voice' },
-        { icon: Workflow, label: t.nav.how, href: '/#how', desc: '5-step booking flow' },
-        { icon: Tag, label: t.nav.pricing, href: '/#pricing', desc: 'Starter · Pro · Scale plans' },
-        { icon: HelpCircle, label: t.nav.faq, href: '/#faq', desc: 'Common questions' },
-        { icon: MessageSquare, label: t.nav.bookDemo, href: '/#contact', desc: 'Talk to us — no commitment' },
-      ],
+        { icon: Home, label: 'Home', href: '/', desc: 'Overview + hero + product', show: true },
+        { icon: Sparkles, label: t.nav.features, href: '/#features', desc: '3 channels: web · chat · voice', show: true },
+        { icon: Workflow, label: t.nav.how, href: '/#how', desc: '5-step booking flow', show: true },
+        { icon: Tag, label: t.nav.pricing, href: '/#pricing', desc: 'Starter · Pro · Scale plans', show: FEATURES.showPricing },
+        { icon: HelpCircle, label: t.nav.faq, href: '/#faq', desc: 'Common questions', show: true },
+        { icon: MessageSquare, label: t.nav.bookDemo, href: '/#contact', desc: 'Talk to us — no commitment', show: true },
+      ].filter((l) => l.show),
     },
     {
       title: p.sections.company,

@@ -200,7 +200,7 @@ export const translations = {
       successTitle: 'Thank you!',
       successBody: "Your demo request is in. We'll be in touch within 24 hours.",
       successAgain: 'Send another',
-      errorMessage: 'Something went wrong. Please email hello@ovioplus.com instead.',
+      errorMessage: 'Something went wrong. Please email contact@ovioplus.com instead.',
       gdprNote: "We'll never share your details. GDPR-compliant.",
     },
     footer: {
@@ -216,7 +216,7 @@ export const translations = {
       gdpr: 'GDPR',
       newsletter: {
         title: 'Get restaurant AI insights, monthly.',
-        subtitle: 'Product updates, restaurant case studies, and industry trends — no spam.',
+        subtitle: 'Product updates, restaurant case studies, and industry trends.',
         placeholder: 'Enter your email',
         cta: 'Subscribe',
         note: 'Unsubscribe anytime. We respect your inbox.',
@@ -289,9 +289,11 @@ export const translations = {
             { title: 'Craft', body: 'AI that feels human. Software that stays out of the way.' },
           ],
         },
-        team: {
-          heading: 'The people',
-          body: 'A small team of engineers and hospitality veterans, based in Italy.',
+        vision: {
+          eyebrow: 'Our vision',
+          heading: 'AI, shaping the future of hospitality.',
+          slogan: 'Your AI Receptionist. Always on. Always warm.',
+          body: 'We believe the next decade of restaurant technology belongs to AI that feels human — reservations answered like a real maître d\', regulars remembered by name, and owners freed from admin to focus on the food. OvioPlus is our contribution to that future.',
         },
       },
       blog: {
@@ -523,7 +525,7 @@ export const translations = {
       successTitle: 'Grazie!',
       successBody: 'La richiesta è arrivata. Ti contattiamo entro 24 ore.',
       successAgain: 'Invia un\'altra',
-      errorMessage: 'Qualcosa è andato storto. Scrivici a hello@ovioplus.com.',
+      errorMessage: 'Qualcosa è andato storto. Scrivici a contact@ovioplus.com.',
       gdprNote: 'I tuoi dati restano riservati. Conforme al GDPR.',
     },
     footer: {
@@ -539,7 +541,7 @@ export const translations = {
       gdpr: 'GDPR',
       newsletter: {
         title: 'Notizie sull\'AI per ristoranti, ogni mese.',
-        subtitle: 'Aggiornamenti prodotto, casi studio e tendenze del settore — niente spam.',
+        subtitle: 'Aggiornamenti prodotto, casi studio e tendenze del settore.',
         placeholder: 'La tua email',
         cta: 'Iscriviti',
         note: 'Disiscriviti quando vuoi. Rispettiamo la tua casella.',
@@ -612,9 +614,11 @@ export const translations = {
             { title: 'Artigianalità', body: 'AI che sembra umana. Software che si fa da parte.' },
           ],
         },
-        team: {
-          heading: 'Il team',
-          body: 'Un piccolo team di ingegneri e veterani dell\'ospitalità, con base in Italia.',
+        vision: {
+          eyebrow: 'La nostra visione',
+          heading: 'L\'AI che ridisegna l\'ospitalità.',
+          slogan: 'Il tuo receptionist AI. Sempre attivo. Sempre umano.',
+          body: 'Crediamo che il prossimo decennio della tecnologia per ristoranti appartenga a un\'AI che sembra umana — prenotazioni gestite come un vero maître, clienti abituali riconosciuti per nome, e titolari liberati dall\'amministrazione per concentrarsi sul cibo. OvioPlus è il nostro contributo a questo futuro.',
         },
       },
       blog: {

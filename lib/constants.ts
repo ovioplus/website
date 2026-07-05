@@ -2,7 +2,7 @@ export const SITE = {
   name: 'OvioPlus',
   domain: 'ovioplus.ai',
   url: 'https://ovioplus.ai',
-  email: 'hello@ovioplus.com',
+  email: 'contact@ovioplus.com',
   tagline: 'Your AI Receptionist',
   description:
     'OvioPlus answers every phone call, chat, and web booking — 24 hours a day. Built for restaurants who never want to miss a reservation again.',

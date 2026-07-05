@@ -64,7 +64,7 @@ export default function TermsPage() {
 
       <h2>9. Contact</h2>
       <p>
-        Email <a href="mailto:hello@ovioplus.com">hello@ovioplus.com</a>.
+        Email <a href="mailto:contact@ovioplus.com">contact@ovioplus.com</a>.
       </p>
     </LegalLayout>
   );
