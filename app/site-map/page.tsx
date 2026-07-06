@@ -9,6 +9,7 @@ import {
   HelpCircle,
   MessageSquare,
   Info,
+  Handshake,
   BookOpen,
   Shield,
   FileText,
@@ -44,6 +45,7 @@ export default function SitemapPage() {
       links: [
         { icon: Info, label: t.footer.companyLinks.about, href: '/about', desc: 'Mission · values · team' },
         { icon: BookOpen, label: t.footer.companyLinks.blog, href: '/blog', desc: 'Product & industry updates' },
+        { icon: Handshake, label: t.footer.companyLinks.partnerships, href: '/partnerships', desc: 'Build with us — software, POS, agencies' },
         { icon: MessageSquare, label: t.footer.companyLinks.contact, href: '/contact', desc: 'All ways to reach us' },
       ],
     },

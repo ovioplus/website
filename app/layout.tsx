@@ -30,10 +30,11 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} - ${SITE.tagline}`,
-    template: `%s - ${SITE.name}`,
+    default: `${SITE.name} — AI Receptionist for Restaurants · Phone, Chat & Web Bookings 24/7`,
+    template: `%s — ${SITE.name}`,
   },
-  description: SITE.description,
+  description:
+    'OvioPlus is the AI receptionist for restaurants. Answer every phone call, chat and web booking 24/7 in Italian and English — never miss a reservation again.',
   metadataBase: new URL(SITE.url),
   keywords: [
     'restaurant reservation system',
@@ -51,14 +52,11 @@ export const metadata: Metadata = {
   publisher: 'OvioPlus',
   alternates: {
     canonical: SITE.url,
-    languages: {
-      'en-US': `${SITE.url}?lang=en`,
-      'it-IT': `${SITE.url}?lang=it`,
-    },
   },
   openGraph: {
-    title: `${SITE.name} - ${SITE.tagline}`,
-    description: SITE.description,
+    title: `${SITE.name} — AI Receptionist for Restaurants`,
+    description:
+      'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English — never miss a reservation again.',
     url: SITE.url,
     siteName: SITE.name,
     locale: 'it_IT',
@@ -67,16 +65,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/icon.png',
-        width: 512,
-        height: 512,
-        alt: `${SITE.name} logo`,
+        alt: `${SITE.name} — AI Receptionist for Restaurants`,
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: `${SITE.name} - ${SITE.tagline}`,
-    description: SITE.description,
+    card: 'summary',
+    title: `${SITE.name} — AI Receptionist for Restaurants`,
+    description:
+      'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English.',
     images: ['/icon.png'],
   },
   robots: {
@@ -116,9 +113,8 @@ const jsonLd = {
       description: SITE.description,
       email: SITE.email,
       sameAs: [
-        'https://linkedin.com/company/ovioplus',
-        'https://twitter.com/ovioplus',
-        'https://instagram.com/ovioplus',
+        'https://www.linkedin.com/company/ovioplus',
+        'https://www.instagram.com/ovioplus',
       ],
     },
     {
@@ -153,7 +149,7 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="en"
+      lang="it"
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="min-h-screen overflow-x-hidden">
