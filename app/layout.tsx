@@ -87,11 +87,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: [{ url: '/icon.png', type: 'image/png' }],
-    apple: '/icon.png',
-    shortcut: '/icon.png',
-  },
   category: 'Technology',
 };
 
