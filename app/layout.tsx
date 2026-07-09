@@ -6,6 +6,7 @@ import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import './globals.css';
 import { BackToTopButton } from '@/components/sections/BackToTopButton';
 import { CookieBanner } from '@/components/ui/CookieBanner';
+import { Analytics } from '@/components/analytics/Analytics';
 
 const display = Cormorant_Garamond({
   subsets: ['latin'],
@@ -163,6 +164,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BackToTopButton />
           <CookieBanner />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
