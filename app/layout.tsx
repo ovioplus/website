@@ -31,7 +31,7 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} — AI Receptionist for Restaurants · Phone, Chat & Web Bookings 24/7`,
+    default: `${SITE.name} — AI Receptionist | Never Miss a Bookings`,
     template: `%s — ${SITE.name}`,
   },
   description:
@@ -47,6 +47,10 @@ export const metadata: Metadata = {
     'restaurant automation',
     'reservation management',
     'OvioPlus',
+    'restaurant booking',
+    'restaurant reservation',
+    'online table booking',
+    'AI restaurant booking',
   ],
   authors: [{ name: 'OvioPlus', url: SITE.url }],
   creator: 'OvioPlus',
