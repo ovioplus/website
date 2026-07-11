@@ -65,19 +65,19 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png', // ✅ CHANGED: Using the new 1200x630 image
-        width: 1200,          // ✅ ADDED: Explicit width
-        height: 630,          // ✅ ADDED: Explicit height
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
         alt: `${SITE.name} — AI Receptionist for Restaurants`,
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image', // ✅ CHANGED: from 'summary' to 'summary_large_image'
+    card: 'summary_large_image',
     title: `${SITE.name} — AI Receptionist for Restaurants`,
     description:
       'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English.',
-    images: ['/og-image.png'], // ✅ CHANGED: using the new 1200x630 image
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -138,6 +138,7 @@ const jsonLd = {
       '@id': `${SITE.url}/#website`,
       url: SITE.url,
       name: SITE.name,
+      image: `${SITE.url}/og-image.png`,
       inLanguage: ['it-IT', 'en-US'],
       publisher: { '@id': `${SITE.url}/#organization` },
     },
