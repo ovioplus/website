@@ -65,6 +65,12 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-2">
             <LanguageToggle />
+            <a
+              href="https://app.ovioplus.ai/sign-in"
+              className="px-3.5 py-1.5 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-full"
+            >
+              {t.nav.signIn}
+            </a>
             <a href="/#contact" className="btn-primary text-sm py-2 px-4 group">
               {t.nav.bookDemo}
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -117,6 +123,19 @@ export function Navbar() {
                   </a>
                 </motion.li>
               ))}
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.05 }}
+              >
+                <a
+                  href="https://app.ovioplus.ai/sign-in"
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-4 text-2xl font-display font-medium text-text-primary border-b border-line"
+                >
+                  {t.nav.signIn}
+                </a>
+              </motion.li>
               <li className="pt-8 flex items-center justify-between">
                 <LanguageToggle />
                 <a href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary">

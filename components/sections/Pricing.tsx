@@ -94,7 +94,7 @@ export function Pricing() {
                   </ul>
 
                   <a
-                    href="#contact"
+                    href="https://app.ovioplus.ai/sign-up"
                     className={cn(
                       'block text-center py-3.5 rounded-xl font-semibold transition-colors',
                       featured

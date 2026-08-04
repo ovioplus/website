@@ -7,6 +7,7 @@ export const translations = {
       how: 'How it works',
       pricing: 'Pricing',
       faq: 'FAQ',
+      signIn: 'Sign in',
       bookDemo: 'Book a demo',
     },
     hero: {
@@ -364,6 +365,7 @@ export const translations = {
       how: 'Come funziona',
       pricing: 'Prezzi',
       faq: 'Domande',
+      signIn: 'Accedi',
       bookDemo: 'Prenota una demo',
     },
     hero: {
