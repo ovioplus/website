@@ -2,7 +2,8 @@
 
 import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Spinner } from '@/components/ui/Spinner';
 import { Reveal } from '@/components/ui/Reveal';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
@@ -228,7 +229,7 @@ export function Contact() {
                     >
                       {status === 'sending' ? (
                         <>
-                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <Spinner size={16} />
                           {t.contact.submitSending}
                         </>
                       ) : (
