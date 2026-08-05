@@ -4,7 +4,7 @@
  */
 export const FEATURES = {
   showClients: false, // client logo carousel — turn on once you have real partners
-  showPricing: false, // pricing tier cards
+  showPricing: true, // pricing tier cards
   showTestimonials: false, // customer quotes
   showHero3D: true, // 3D dashboard preview in hero
 } as const;
