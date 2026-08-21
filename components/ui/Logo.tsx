@@ -61,7 +61,7 @@ export function Logo({
     );
   }
 
-  // Inline SVG fallback — infinity with embedded plus
+  // Inline SVG fallback infinity with embedded plus
   const rawId = useId();
   const id = `og-${rawId.replace(/:/g, '')}`;
   const w = size;
@@ -82,7 +82,7 @@ export function Logo({
             <stop offset="100%" stopColor="#2CABE6" />
           </linearGradient>
         </defs>
-        {/* Infinity loop — two interlocking circles */}
+        {/* Infinity loop two interlocking circles */}
         <path
           d="M 25 27 C 25 14, 5 14, 5 27 C 5 40, 25 40, 35 27 C 45 14, 65 14, 75 27 C 85 40, 65 40, 65 27 C 65 14, 85 14, 95 27 C 85 40, 65 40, 55 27 C 45 14, 25 14, 15 27 C 5 40, 25 40, 25 27 Z"
           stroke={`url(#${id})`}
@@ -90,7 +90,7 @@ export function Logo({
           fill="none"
           strokeLinecap="round"
         />
-        {/* Plus sign — at the crossing point */}
+        {/* Plus sign at the crossing point */}
         <line x1="50" y1="14" x2="50" y2="40" stroke={`url(#${id})`} strokeWidth="3" strokeLinecap="round" />
         <line x1="37" y1="27" x2="63" y2="27" stroke={`url(#${id})`} strokeWidth="3" strokeLinecap="round" />
       </svg>

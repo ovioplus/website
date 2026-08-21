@@ -28,7 +28,7 @@ export function Clients() {
           </div>
         </Reveal>
 
-        {/* CSS mask creates true transparent edges — no color overlay */}
+        {/* CSS mask creates true transparent edges no color overlay */}
         <div
           className="relative overflow-hidden"
           style={{

@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = 'ovioplus-lang';
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Default to 'it' for Italian audience — change to 'en' if you prefer
+  // Default to 'it' for Italian audience change to 'en' if you prefer
   const [lang, setLangState] = useState<Lang>('it');
 
   // Load persisted choice (or browser language) after mount
@@ -25,7 +25,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       document.documentElement.lang = stored;
       return;
     }
-    // First visit — detect from browser
+    // First visit detect from browser
     const browserLang = navigator.language.toLowerCase();
     const initial: Lang = browserLang.startsWith('it') ? 'it' : 'en';
     setLangState(initial);

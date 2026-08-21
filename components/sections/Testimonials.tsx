@@ -9,9 +9,9 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 const TESTIMONIALS = [
   {
     quoteEn:
-      "OvioPlus answered 847 calls last month. We didn't miss a single booking — and our team finally has time to focus on the actual dining experience.",
+      "OvioPlus answered 847 calls last month. We didn't miss a single booking and our team finally has time to focus on the actual dining experience.",
     quoteIt:
-      "OvioPlus ha risposto a 847 chiamate il mese scorso. Non abbiamo perso una sola prenotazione — e il team finalmente può concentrarsi sull'esperienza in sala.",
+      "OvioPlus ha risposto a 847 chiamate il mese scorso. Non abbiamo perso una sola prenotazione e il team finalmente può concentrarsi sull'esperienza in sala.",
     name: 'Marco Rinaldi',
     role: 'Owner · Trattoria San Marco, Parma',
   },

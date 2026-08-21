@@ -7,7 +7,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * Newsletter subscribe endpoint.
  *
  * Uses **Resend Audiences** (same Resend account you already use for the
- * contact form — no new service needed, no new account).
+ * contact form no new service needed, no new account).
  *
  * Setup once:
  *   1. Go to https://resend.com/audiences
@@ -32,10 +32,10 @@ export async function POST(req: Request) {
     const apiKey = process.env.RESEND_API_KEY;
     const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-    // Dev fallback — no keys configured
+    // Dev fallback no keys configured
     if (!apiKey || !audienceId) {
       console.log(`\n[newsletter] new subscriber: ${email} (lang: ${lang})`);
-      console.log('(No RESEND_AUDIENCE_ID set — subscriber not saved to Resend.)\n');
+      console.log('(No RESEND_AUDIENCE_ID set subscriber not saved to Resend.)\n');
       return NextResponse.json({ ok: true, mode: 'logged' });
     }
 

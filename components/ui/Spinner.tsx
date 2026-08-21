@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 /**
- * Branded arc spinner — a rounded ~75% arc over a faint track, spinning.
+ * Branded arc spinner a rounded ~75% arc over a faint track, spinning.
  * Inherits colour via `currentColor` (e.g. add `text-brand-cyan`).
  */
 export function Spinner({ size = 20, className }: { size?: number; className?: string }) {

@@ -82,7 +82,7 @@ export default function AboutPage() {
             className="mb-20 md:mb-24"
           >
             <div className="relative rounded-3xl bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-10 md:p-16 text-center overflow-hidden shadow-xl shadow-brand-cyan/20">
-              {/* Decorative sparkle SVGs — pure CSS, GPU-cheap */}
+              {/* Decorative sparkle SVGs pure CSS, GPU-cheap */}
               <div aria-hidden className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-8 left-12 w-2 h-2 rounded-full bg-white/40" />
                 <div className="absolute top-16 right-16 w-3 h-3 rounded-full bg-white/25" />

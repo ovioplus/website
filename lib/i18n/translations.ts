@@ -17,7 +17,7 @@ export const translations = {
       titleHighlight: 'booking',
       titlePeriod: '.',
       subtitle:
-        'OvioPlus answers every phone call, chat, and web booking — 24 hours a day. Built for restaurants that want every table filled and every guest remembered.',
+        'OvioPlus answers every phone call, chat, and web booking 24 hours a day. Built for restaurants that want every table filled and every guest remembered.',
       cta1: 'Book a 30-min demo',
       cta2: 'See how it works',
       stat1Label: 'Live now',
@@ -36,25 +36,25 @@ export const translations = {
       title1: 'Wherever your customer reaches you,',
       titleHighlight: 'we answer.',
       subtitle:
-        'Same calendar. Same data. Same brain. Whether they call, chat, or click — they always get the same instant, accurate response.',
+        'Same calendar. Same data. Same brain. Whether they call, chat, or click they always get the same instant, accurate response.',
       cards: [
         {
           eyebrow: 'Web',
           title: 'Visual booking',
           description:
-            'Customers see your actual floor plan and pick their exact table — like choosing a seat on a flight, but for dinner.',
+            'Customers see your actual floor plan and pick their exact table like choosing a seat on a flight, but for dinner.',
         },
         {
           eyebrow: 'Embed',
           title: 'AI chat',
           description:
-            "Drop a widget on your site. Customers type 'a table for 4 tomorrow at 8' — the AI handles the rest, in Italian or English.",
+            "Drop a widget on your site. Customers type 'a table for 4 tomorrow at 8' the AI handles the rest, in Italian or English.",
         },
         {
           eyebrow: 'Phone',
           title: 'AI voice',
           description:
-            'Keep your existing number. Forward calls to our AI — it answers in a natural voice, books the table, sends confirmation.',
+            'Keep your existing number. Forward calls to our AI it answers in a natural voice, books the table, sends confirmation.',
         },
       ],
     },
@@ -66,7 +66,7 @@ export const translations = {
       steps: [
         { title: 'Customer reaches out', body: 'Phone, chat, or web form.' },
         { title: 'AI collects details', body: 'Date, time, guests, name, email, phone.' },
-        { title: 'Availability checked', body: 'Live table inventory — never overbooks.' },
+        { title: 'Availability checked', body: 'Live table inventory never overbooks.' },
         { title: 'Reservation created', body: 'Saved in your dashboard instantly.' },
         { title: 'Confirmation sent', body: 'Customer + owner notified by email.' },
       ],
@@ -78,10 +78,10 @@ export const translations = {
       subtitle:
         'Every booking, table, and customer in one calm interface. Built so your staff can use it in 60 seconds, not 60 minutes.',
       features: [
-        { title: 'Live calendar', body: 'Day, week, month — click any date to see who is coming.' },
+        { title: 'Live calendar', body: 'Day, week, month click any date to see who is coming.' },
         { title: 'Table management', body: 'Add, edit, mark occupied. AI respects your seating plan.' },
         { title: 'Operating hours', body: 'Per-day open / close. Holidays and special closures.' },
-        { title: 'Auto-confirm rules', body: 'Approve manually or set rules — AI handles the routine.' },
+        { title: 'Auto-confirm rules', body: 'Approve manually or set rules AI handles the routine.' },
         { title: 'Reservation history', body: 'Search by name, phone, date. Recognize your regulars.' },
         { title: 'Daily summary email', body: "Every morning: today's load, tomorrow's preview." },
       ],
@@ -113,7 +113,7 @@ export const translations = {
             { text: 'AI text chat (IT + EN)', note: '' },
             {
               text: '1,000 AI-assisted bookings / month',
-              note: 'After that, the classic booking form is always available — guests are never blocked from booking.',
+              note: '€19 → +1,500 bookings',
             },
             { text: 'Email confirmations', note: '' },
             { text: 'Admin dashboard', note: '' },
@@ -134,16 +134,16 @@ export const translations = {
             { text: 'AI voice + phone receptionist', note: '' },
             {
               text: 'Dedicated OvioPlus phone number',
-              note: 'Keep your existing number — just forward it to your new one. No porting, guests dial what they already know.',
+              note: 'Keep your existing number just forward it to your new one. No porting, guests dial what they already know.',
             },
             { text: '1,500 AI chat bookings / month', note: '' },
-            {
-              text: '200 AI voice/phone minutes / month',
-              note: 'One shared pool for the web voice widget and phone calls. Need more some months? Buy extra without upgrading.',
-            },
+            { text: '200 AI voice/phone minutes / month', note: '' },
             { text: 'Operating hours management', note: '' },
             { text: 'Priority email support', note: '' },
-            { text: 'Buy more anytime — no upgrade needed', note: '' },
+            {
+              text: 'Buy more anytime no upgrade needed',
+              note: '€19 → +1,500 bookings or +125 min',
+            },
           ],
         },
         {
@@ -152,19 +152,19 @@ export const translations = {
           priceYearly: '€449',
           priceYearlyTotal: '€5,388',
           period: '/ month',
-          description: 'For busy restaurants — high call volume.',
+          description: 'For busy restaurants high call volume.',
           features: [
             { text: 'Everything in Pro', note: '' },
             { text: '3,000 AI chat bookings / month', note: '' },
-            {
-              text: '500 AI voice/phone minutes / month',
-              note: 'One shared pool for the web voice widget and phone calls. Need more some months? Buy extra without upgrading.',
-            },
+            { text: '500 AI voice/phone minutes / month', note: '' },
             { text: 'Multi-channel routing rules', note: '' },
             { text: 'Custom IVR menu', note: '' },
             { text: 'Advanced analytics', note: '' },
             { text: 'Dedicated onboarding', note: '' },
-            { text: 'Buy more anytime — no upgrade needed', note: '' },
+            {
+              text: 'Buy more anytime no upgrade needed',
+              note: '€19 → +1,500 bookings or +125 min',
+            },
           ],
         },
       ],
@@ -232,7 +232,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        'An AI receptionist for restaurants. Phone, chat, and web bookings — handled 24/7.',
+        'An AI receptionist for restaurants. Phone, chat, and web bookings handled 24/7.',
       product: 'Product',
       company: 'Company',
       legal: 'Legal',
@@ -247,7 +247,7 @@ export const translations = {
         placeholder: 'Enter your email',
         cta: 'Subscribe',
         note: 'Unsubscribe anytime. We respect your inbox.',
-        successTitle: 'Thanks — you\'re in!',
+        successTitle: 'Thanks you\'re in!',
         successBody: 'Check your inbox for a confirmation.',
         errorMessage: 'Something went wrong. Please try again.',
       },
@@ -306,7 +306,7 @@ export const translations = {
         subtitle: 'OvioPlus started with a simple observation: independent restaurants lose bookings every single day because no one can answer the phone. We\'re fixing that.',
         mission: {
           heading: 'Our mission',
-          body: 'Give every restaurant — from a family trattoria to a busy Michelin room — a receptionist that never sleeps, never misses a call, and never forgets a regular. So owners can focus on food and hospitality, not admin.',
+          body: 'Give every restaurant from a family trattoria to a busy Michelin room a receptionist that never sleeps, never misses a call, and never forgets a regular. So owners can focus on food and hospitality, not admin.',
         },
         values: {
           heading: 'What we care about',
@@ -321,7 +321,7 @@ export const translations = {
           eyebrow: 'Our vision',
           heading: 'AI, shaping the future of hospitality.',
           slogan: 'Your AI Receptionist. Always on. Always warm.',
-          body: 'We believe the next decade of restaurant technology belongs to AI that feels human — reservations answered like a real maître d\', regulars remembered by name, and owners freed from admin to focus on the food. OvioPlus is our contribution to that future.',
+          body: 'We believe the next decade of restaurant technology belongs to AI that feels human reservations answered like a real maître d\', regulars remembered by name, and owners freed from admin to focus on the food. OvioPlus is our contribution to that future.',
         },
       },
       blog: {
@@ -334,7 +334,7 @@ export const translations = {
       sitemap: {
         eyebrow: 'Sitemap',
         title: 'Everything on ovioplus.ai',
-        subtitle: 'A quick map of every page on the site. Handy for finding what you need — or seeing what we\'ve built.',
+        subtitle: 'A quick map of every page on the site. Handy for finding what you need or seeing what we\'ve built.',
         sections: {
           main: 'Main',
           company: 'Company',
@@ -354,7 +354,7 @@ export const translations = {
       partnerships: {
         eyebrow: 'Partnerships',
         title: 'Together, we are building the future of the restaurant industry.',
-        subtitle: 'At OvioPlus, we believe that innovation stems from collaboration. That is why we work alongside software developers, consulting firms, technology companies, hospitality suppliers, and professionals who share our vision — making restaurant management smarter, more efficient, and more connected.',
+        subtitle: 'At OvioPlus, we believe that innovation stems from collaboration. That is why we work alongside software developers, consulting firms, technology companies, hospitality suppliers, and professionals who share our vision making restaurant management smarter, more efficient, and more connected.',
         introHeading: 'Partnerships that create mutual value',
         introBody: 'Our partnerships are designed to create mutual value by offering innovative solutions that enhance the experience for both restaurateurs and their customers. We are looking for partners who want to grow with us.',
         whoHeading: 'Who we partner with',
@@ -375,7 +375,7 @@ export const translations = {
           'Build innovative solutions for the European market together.',
         ],
         principlesHeading: 'Trust, transparency, and shared vision',
-        principlesBody: 'We believe in partnerships based on trust, transparency, and a shared vision of innovation. OvioPlus is not looking for simple collaborations — we build lasting relationships.',
+        principlesBody: 'We believe in partnerships based on trust, transparency, and a shared vision of innovation. OvioPlus is not looking for simple collaborations we build lasting relationships.',
         origin: 'Built in Italy. Designed for Europe.',
         ctaHeading: 'Let\'s build something together.',
         ctaBody: 'Tell us about your company and the customers you serve. We will get back to you within 48 hours.',
@@ -401,7 +401,7 @@ export const translations = {
       titleHighlight: 'prenotazione',
       titlePeriod: '.',
       subtitle:
-        'OvioPlus risponde a ogni telefonata, chat e prenotazione web — 24 ore su 24. Pensato per i ristoranti che vogliono ogni tavolo pieno e ogni ospite ricordato.',
+        'OvioPlus risponde a ogni telefonata, chat e prenotazione web 24 ore su 24. Pensato per i ristoranti che vogliono ogni tavolo pieno e ogni ospite ricordato.',
       cta1: 'Prenota una demo di 30 min',
       cta2: 'Scopri come funziona',
       stat1Label: 'In diretta',
@@ -420,25 +420,25 @@ export const translations = {
       title1: "Ovunque ti contatti il cliente,",
       titleHighlight: 'noi rispondiamo.',
       subtitle:
-        "Stesso calendario. Stessi dati. Stesso cervello. Che chiamino, scrivano o clicchino — la risposta è sempre immediata e precisa.",
+        "Stesso calendario. Stessi dati. Stesso cervello. Che chiamino, scrivano o clicchino la risposta è sempre immediata e precisa.",
       cards: [
         {
           eyebrow: 'Web',
           title: 'Prenotazione visiva',
           description:
-            "Il cliente vede la pianta del tuo locale e sceglie il tavolo esatto — come scegliere il posto sull'aereo, ma per cena.",
+            "Il cliente vede la pianta del tuo locale e sceglie il tavolo esatto come scegliere il posto sull'aereo, ma per cena.",
         },
         {
           eyebrow: 'Embed',
           title: 'Chat AI',
           description:
-            "Un widget sul tuo sito. Il cliente scrive 'un tavolo per 4 domani alle 20' — l'AI fa il resto, in italiano o inglese.",
+            "Un widget sul tuo sito. Il cliente scrive 'un tavolo per 4 domani alle 20' l'AI fa il resto, in italiano o inglese.",
         },
         {
           eyebrow: 'Telefono',
           title: 'Voice AI',
           description:
-            "Mantieni il numero attuale. Inoltra le chiamate alla nostra AI — risponde con voce naturale, prenota e conferma.",
+            "Mantieni il numero attuale. Inoltra le chiamate alla nostra AI risponde con voce naturale, prenota e conferma.",
         },
       ],
     },
@@ -450,7 +450,7 @@ export const translations = {
       steps: [
         { title: 'Il cliente contatta', body: 'Telefono, chat o modulo web.' },
         { title: "L'AI raccoglie i dati", body: 'Data, ora, ospiti, nome, email, telefono.' },
-        { title: 'Disponibilità verificata', body: 'Inventario tavoli in tempo reale — niente overbooking.' },
+        { title: 'Disponibilità verificata', body: 'Inventario tavoli in tempo reale niente overbooking.' },
         { title: 'Prenotazione creata', body: 'Salvata istantaneamente nel tuo gestionale.' },
         { title: 'Conferma inviata', body: 'Cliente e titolare notificati via email.' },
       ],
@@ -462,10 +462,10 @@ export const translations = {
       subtitle:
         'Ogni prenotazione, tavolo e cliente in un\'unica interfaccia. Lo staff lo usa in 60 secondi, non 60 minuti.',
       features: [
-        { title: 'Calendario live', body: 'Giorno, settimana, mese — clicca per vedere chi arriva.' },
+        { title: 'Calendario live', body: 'Giorno, settimana, mese clicca per vedere chi arriva.' },
         { title: 'Gestione tavoli', body: 'Aggiungi, modifica, marca occupato. L\'AI rispetta la tua piantina.' },
         { title: 'Orari di apertura', body: 'Apertura/chiusura per giorno. Festivi e chiusure speciali.' },
-        { title: 'Regole automatiche', body: 'Approva manualmente o imposta regole — l\'AI gestisce la routine.' },
+        { title: 'Regole automatiche', body: 'Approva manualmente o imposta regole l\'AI gestisce la routine.' },
         { title: 'Storico prenotazioni', body: 'Cerca per nome, telefono, data. Riconosci i clienti abituali.' },
         { title: 'Riepilogo giornaliero', body: 'Ogni mattina: carico di oggi, anteprima di domani.' },
       ],
@@ -497,7 +497,7 @@ export const translations = {
             { text: 'Chat AI (IT + EN)', note: '' },
             {
               text: '1.000 prenotazioni assistite da AI / mese',
-              note: 'Superata la soglia, resta sempre disponibile il modulo di prenotazione classico — gli ospiti non restano mai bloccati.',
+              note: '€19 → +1.500 prenotazioni',
             },
             { text: 'Conferme via email', note: '' },
             { text: 'Pannello di gestione', note: '' },
@@ -518,16 +518,16 @@ export const translations = {
             { text: 'Receptionist AI vocale + telefonico', note: '' },
             {
               text: 'Numero di telefono OvioPlus dedicato',
-              note: 'Mantieni il tuo numero — basta deviarlo verso il nuovo. Nessuna portabilità, i clienti chiamano il numero che già conoscono.',
+              note: 'Mantieni il tuo numero basta deviarlo verso il nuovo. Nessuna portabilità, i clienti chiamano il numero che già conoscono.',
             },
             { text: '1.500 prenotazioni chat AI / mese', note: '' },
-            {
-              text: '200 minuti voce/telefono AI / mese',
-              note: 'Un unico pacchetto condiviso tra widget voce web e telefonate. Ti serve di più in certi mesi? Acquista extra senza fare upgrade.',
-            },
+            { text: '200 minuti voce/telefono AI / mese', note: '' },
             { text: 'Gestione orari', note: '' },
             { text: 'Supporto prioritario', note: '' },
-            { text: 'Acquista extra in ogni momento — nessun upgrade richiesto', note: '' },
+            {
+              text: 'Acquista extra in ogni momento nessun upgrade richiesto',
+              note: '€19 → +1.500 prenotazioni o +125 min',
+            },
           ],
         },
         {
@@ -540,15 +540,15 @@ export const translations = {
           features: [
             { text: 'Tutto di Pro', note: '' },
             { text: '3.000 prenotazioni chat AI / mese', note: '' },
-            {
-              text: '500 minuti voce/telefono AI / mese',
-              note: 'Un unico pacchetto condiviso tra widget voce web e telefonate. Ti serve di più in certi mesi? Acquista extra senza fare upgrade.',
-            },
+            { text: '500 minuti voce/telefono AI / mese', note: '' },
             { text: 'Routing multi-canale', note: '' },
             { text: 'Menu IVR personalizzato', note: '' },
             { text: 'Analytics avanzate', note: '' },
             { text: 'Onboarding dedicato', note: '' },
-            { text: 'Acquista extra in ogni momento — nessun upgrade richiesto', note: '' },
+            {
+              text: 'Acquista extra in ogni momento nessun upgrade richiesto',
+              note: '€19 → +1.500 prenotazioni o +125 min',
+            },
           ],
         },
       ],
@@ -616,7 +616,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        'Un receptionist AI per ristoranti. Telefono, chat e prenotazioni web — gestiti 24/7.',
+        'Un receptionist AI per ristoranti. Telefono, chat e prenotazioni web gestiti 24/7.',
       product: 'Prodotto',
       company: 'Azienda',
       legal: 'Legale',
@@ -631,7 +631,7 @@ export const translations = {
         placeholder: 'La tua email',
         cta: 'Iscriviti',
         note: 'Disiscriviti quando vuoi. Rispettiamo la tua casella.',
-        successTitle: 'Grazie — sei dentro!',
+        successTitle: 'Grazie sei dentro!',
         successBody: 'Controlla la tua email per la conferma.',
         errorMessage: 'Qualcosa è andato storto. Riprova.',
       },
@@ -690,7 +690,7 @@ export const translations = {
         subtitle: 'OvioPlus nasce da un\'osservazione semplice: i ristoranti indipendenti perdono prenotazioni ogni giorno perché nessuno può rispondere al telefono. Lo risolviamo noi.',
         mission: {
           heading: 'La nostra missione',
-          body: 'Dare a ogni ristorante — dalla trattoria di famiglia alla sala stellata — un receptionist che non dorme mai, non perde una chiamata e non dimentica un cliente. Così i titolari si concentrano su cibo e ospitalità, non sull\'amministrazione.',
+          body: 'Dare a ogni ristorante dalla trattoria di famiglia alla sala stellata un receptionist che non dorme mai, non perde una chiamata e non dimentica un cliente. Così i titolari si concentrano su cibo e ospitalità, non sull\'amministrazione.',
         },
         values: {
           heading: 'A cosa teniamo',
@@ -705,7 +705,7 @@ export const translations = {
           eyebrow: 'La nostra visione',
           heading: 'L\'AI che ridisegna l\'ospitalità.',
           slogan: 'Il tuo receptionist AI. Sempre attivo. Sempre umano.',
-          body: 'Crediamo che il prossimo decennio della tecnologia per ristoranti appartenga a un\'AI che sembra umana — prenotazioni gestite come un vero maître, clienti abituali riconosciuti per nome, e titolari liberati dall\'amministrazione per concentrarsi sul cibo. OvioPlus è il nostro contributo a questo futuro.',
+          body: 'Crediamo che il prossimo decennio della tecnologia per ristoranti appartenga a un\'AI che sembra umana prenotazioni gestite come un vero maître, clienti abituali riconosciuti per nome, e titolari liberati dall\'amministrazione per concentrarsi sul cibo. OvioPlus è il nostro contributo a questo futuro.',
         },
       },
       blog: {
@@ -718,7 +718,7 @@ export const translations = {
       sitemap: {
         eyebrow: 'Mappa del sito',
         title: 'Tutto su ovioplus.ai',
-        subtitle: 'Una mappa rapida di ogni pagina del sito. Utile per trovare quello che ti serve — o vedere cosa abbiamo costruito.',
+        subtitle: 'Una mappa rapida di ogni pagina del sito. Utile per trovare quello che ti serve o vedere cosa abbiamo costruito.',
         sections: {
           main: 'Principale',
           company: 'Azienda',
@@ -738,7 +738,7 @@ export const translations = {
       partnerships: {
         eyebrow: 'Partnership',
         title: 'Insieme stiamo costruendo il futuro della ristorazione.',
-        subtitle: 'In OvioPlus crediamo che l\'innovazione nasca dalla collaborazione. Per questo lavoriamo al fianco di sviluppatori software, società di consulenza, aziende tecnologiche, fornitori del settore ospitalità e professionisti che condividono la nostra visione — rendere la gestione del ristorante più intelligente, efficiente e connessa.',
+        subtitle: 'In OvioPlus crediamo che l\'innovazione nasca dalla collaborazione. Per questo lavoriamo al fianco di sviluppatori software, società di consulenza, aziende tecnologiche, fornitori del settore ospitalità e professionisti che condividono la nostra visione rendere la gestione del ristorante più intelligente, efficiente e connessa.',
         introHeading: 'Partnership che creano valore reciproco',
         introBody: 'Le nostre partnership sono pensate per creare valore reciproco, offrendo soluzioni innovative che migliorano l\'esperienza sia dei ristoratori sia dei loro clienti. Cerchiamo partner che vogliano crescere con noi.',
         whoHeading: 'Con chi collaboriamo',
@@ -759,7 +759,7 @@ export const translations = {
           'Costruisci insieme soluzioni innovative per il mercato europeo.',
         ],
         principlesHeading: 'Fiducia, trasparenza e visione condivisa',
-        principlesBody: 'Crediamo in partnership fondate su fiducia, trasparenza e una visione condivisa dell\'innovazione. OvioPlus non cerca semplici collaborazioni — costruiamo relazioni durature.',
+        principlesBody: 'Crediamo in partnership fondate su fiducia, trasparenza e una visione condivisa dell\'innovazione. OvioPlus non cerca semplici collaborazioni costruiamo relazioni durature.',
         origin: 'Nato in Italia. Progettato per l\'Europa.',
         ctaHeading: 'Costruiamo qualcosa insieme.',
         ctaBody: 'Raccontaci della tua azienda e dei clienti che servi. Ti rispondiamo entro 48 ore.',

@@ -74,7 +74,7 @@ export function Hero() {
           className="relative mt-16 md:mt-20 mx-auto max-w-6xl"
         >
           <div className="grid grid-cols-12 gap-4 md:gap-6 items-stretch">
-            {/* Left column — AI Assistant */}
+            {/* Left column AI Assistant */}
             <div className="hidden md:flex md:col-span-3 flex-col gap-4">
               <FloatingCard delay={0.4} className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
@@ -155,7 +155,7 @@ export function Hero() {
               <DashboardMockup />
             </div>
 
-            {/* Right column — Weekly Card */}
+            {/* Right column Weekly Card */}
             <div className="hidden md:flex md:col-span-3 flex-col gap-4">
               {/* No flex-1 / no forced stretch here: the card sizes itself to its
                   own content, so the top and bottom padding (p-5, from

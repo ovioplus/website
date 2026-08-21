@@ -1,7 +1,7 @@
 import { LegalShell } from '@/components/legal/LegalShell';
 
 export const metadata = {
-  title: 'Terms & Conditions — OvioPlus',
+  title: 'Terms & Conditions OvioPlus',
   description: 'Terms of use of the OvioPlus platform.',
 };
 
