@@ -32,7 +32,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: {
     default: `${SITE.name}: AI Receptionist | Never Miss a Bookings`,
-    template: `%s: ${SITE.name}`,
+    template: `%s | ${SITE.name}`,
   },
   description:
     'OvioPlus is the AI receptionist for restaurants. Answer every phone call, chat and web booking 24/7 in Italian and English. Never miss a reservation again.',
