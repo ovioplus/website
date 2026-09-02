@@ -1,5 +1,5 @@
 /**
- * Legal documents content in IT (original / authoritative) and EN (translation).
+ * Legal documents: content in IT (original / authoritative) and EN (translation).
  * Each doc has sections so we can render a sticky TOC.
  */
 
@@ -20,7 +20,7 @@ export type LegalDoc = {
 const PRIVACY_IT: LegalDoc = {
   slug: 'privacy',
   title: 'Informativa Privacy',
-  subtitle: 'Per i clienti finali trattamento dei dati personali',
+  subtitle: 'Per i clienti finali: trattamento dei dati personali',
   lastUpdated: '27 Giugno 2026',
   sections: [
     {
@@ -59,7 +59,7 @@ const PRIVACY_IT: LegalDoc = {
 const PRIVACY_EN: LegalDoc = {
   slug: 'privacy',
   title: 'Privacy Policy',
-  subtitle: 'For end customers processing of personal data',
+  subtitle: 'For end customers: processing of personal data',
   lastUpdated: 'June 27, 2026',
   sections: [
     {
@@ -101,16 +101,16 @@ const TERMS_IT: LegalDoc = {
   subtitle: 'Condizioni di utilizzo della piattaforma OvioPlus',
   lastUpdated: '27 Giugno 2026',
   sections: [
-    { id: 'oggetto', heading: 'Art. 1 Oggetto', body: 'Le presenti Condizioni disciplinano l\'utilizzo della piattaforma software OvioPlus, accessibile tramite il dominio ovioplus.com, destinata alla gestione delle prenotazioni, delle chiamate e dei servizi correlati per ristoranti e attività di ristorazione.' },
-    { id: 'registrazione', heading: 'Art. 2 Registrazione', body: 'L\'accesso ai servizi è riservato agli utenti registrati. Il Cliente garantisce che tutte le informazioni fornite sono veritiere, aggiornate e complete.' },
-    { id: 'licenza', heading: 'Art. 3 Licenza d\'uso', body: 'OvioPlus concede al Cliente una licenza personale, non esclusiva, non trasferibile e revocabile per l\'utilizzo della piattaforma durante la validità del contratto.' },
-    { id: 'uso', heading: 'Art. 4 Utilizzo corretto', body: 'Il Cliente si impegna a utilizzare il servizio nel rispetto delle normative vigenti e a non utilizzare la piattaforma per finalità illecite, fraudolente o che possano compromettere il funzionamento del servizio.' },
-    { id: 'disponibilita', heading: 'Art. 5 Disponibilità del servizio', body: 'OvioPlus si impegna ad adottare ogni ragionevole misura per garantire la continuità del servizio. Potranno verificarsi interruzioni dovute a manutenzione programmata, aggiornamenti, guasti tecnici, problemi di rete, servizi di terze parti o cause di forza maggiore.' },
-    { id: 'limitazione', heading: 'Art. 6 Limitazione di responsabilità', body: 'Nei limiti consentiti dalla legge, OvioPlus non risponde di danni diretti o indiretti derivanti da:\n\n• interruzioni della connessione Internet\n• indisponibilità temporanea della piattaforma\n• guasti imputabili a fornitori terzi\n• utilizzo improprio del servizio da parte del Cliente\n• eventi di forza maggiore\n\nOvioPlus non garantisce l\'assenza assoluta di errori o interruzioni.' },
-    { id: 'assistenza', heading: 'Art. 7 Assistenza tecnica', body: 'L\'assistenza viene fornita secondo il piano sottoscritto dal Cliente. Gli interventi possono essere inclusi nel canone, fatturati separatamente oppure effettuati gratuitamente quando previsto dal contratto o autorizzato da OvioPlus.' },
-    { id: 'proprieta', heading: 'Art. 8 Proprietà intellettuale', body: 'Il software, il codice sorgente, il marchio OvioPlus, la documentazione e ogni contenuto della piattaforma sono protetti dalle norme sulla proprietà intellettuale e rimangono di esclusiva proprietà di OvioPlus.' },
-    { id: 'modifiche', heading: 'Art. 9 Modifiche', body: 'OvioPlus potrà modificare le presenti Condizioni. Le nuove versioni saranno pubblicate sul sito.' },
-    { id: 'legge', heading: 'Art. 10 Legge applicabile', body: 'Le presenti Condizioni sono disciplinate dalla legge italiana. Per quanto non espressamente previsto si applicano le disposizioni di legge vigenti.' },
+    { id: 'oggetto', heading: 'Art. 1: Oggetto', body: 'Le presenti Condizioni disciplinano l\'utilizzo della piattaforma software OvioPlus, accessibile tramite il dominio ovioplus.com, destinata alla gestione delle prenotazioni, delle chiamate e dei servizi correlati per ristoranti e attività di ristorazione.' },
+    { id: 'registrazione', heading: 'Art. 2: Registrazione', body: 'L\'accesso ai servizi è riservato agli utenti registrati. Il Cliente garantisce che tutte le informazioni fornite sono veritiere, aggiornate e complete.' },
+    { id: 'licenza', heading: 'Art. 3: Licenza d\'uso', body: 'OvioPlus concede al Cliente una licenza personale, non esclusiva, non trasferibile e revocabile per l\'utilizzo della piattaforma durante la validità del contratto.' },
+    { id: 'uso', heading: 'Art. 4: Utilizzo corretto', body: 'Il Cliente si impegna a utilizzare il servizio nel rispetto delle normative vigenti e a non utilizzare la piattaforma per finalità illecite, fraudolente o che possano compromettere il funzionamento del servizio.' },
+    { id: 'disponibilita', heading: 'Art. 5: Disponibilità del servizio', body: 'OvioPlus si impegna ad adottare ogni ragionevole misura per garantire la continuità del servizio. Potranno verificarsi interruzioni dovute a manutenzione programmata, aggiornamenti, guasti tecnici, problemi di rete, servizi di terze parti o cause di forza maggiore.' },
+    { id: 'limitazione', heading: 'Art. 6: Limitazione di responsabilità', body: 'Nei limiti consentiti dalla legge, OvioPlus non risponde di danni diretti o indiretti derivanti da:\n\n• interruzioni della connessione Internet\n• indisponibilità temporanea della piattaforma\n• guasti imputabili a fornitori terzi\n• utilizzo improprio del servizio da parte del Cliente\n• eventi di forza maggiore\n\nOvioPlus non garantisce l\'assenza assoluta di errori o interruzioni.' },
+    { id: 'assistenza', heading: 'Art. 7: Assistenza tecnica', body: 'L\'assistenza viene fornita secondo il piano sottoscritto dal Cliente. Gli interventi possono essere inclusi nel canone, fatturati separatamente oppure effettuati gratuitamente quando previsto dal contratto o autorizzato da OvioPlus.' },
+    { id: 'proprieta', heading: 'Art. 8: Proprietà intellettuale', body: 'Il software, il codice sorgente, il marchio OvioPlus, la documentazione e ogni contenuto della piattaforma sono protetti dalle norme sulla proprietà intellettuale e rimangono di esclusiva proprietà di OvioPlus.' },
+    { id: 'modifiche', heading: 'Art. 9: Modifiche', body: 'OvioPlus potrà modificare le presenti Condizioni. Le nuove versioni saranno pubblicate sul sito.' },
+    { id: 'legge', heading: 'Art. 10: Legge applicabile', body: 'Le presenti Condizioni sono disciplinate dalla legge italiana. Per quanto non espressamente previsto si applicano le disposizioni di legge vigenti.' },
   ],
 };
 
@@ -120,16 +120,16 @@ const TERMS_EN: LegalDoc = {
   subtitle: 'Terms of use of the OvioPlus platform',
   lastUpdated: 'June 27, 2026',
   sections: [
-    { id: 'oggetto', heading: 'Art. 1 Subject', body: 'These Terms govern the use of the OvioPlus software platform, accessible at ovioplus.com, intended for managing reservations, calls, and related services for restaurants and dining establishments.' },
-    { id: 'registrazione', heading: 'Art. 2 Registration', body: 'Access to the services is reserved for registered users. The Customer warrants that all information provided is truthful, current, and complete.' },
-    { id: 'licenza', heading: 'Art. 3 License of use', body: 'OvioPlus grants the Customer a personal, non-exclusive, non-transferable, and revocable license to use the platform for the duration of the contract.' },
-    { id: 'uso', heading: 'Art. 4 Acceptable use', body: 'The Customer agrees to use the service in compliance with applicable regulations and not to use the platform for unlawful, fraudulent purposes or in ways that could compromise the service.' },
-    { id: 'disponibilita', heading: 'Art. 5 Service availability', body: 'OvioPlus undertakes to adopt every reasonable measure to ensure service continuity. Interruptions may occur due to scheduled maintenance, updates, technical failures, network issues, third-party services, or force majeure.' },
-    { id: 'limitazione', heading: 'Art. 6 Limitation of liability', body: 'To the extent permitted by law, OvioPlus is not liable for direct or indirect damages resulting from:\n\n• Internet connection interruptions\n• temporary platform unavailability\n• failures attributable to third-party suppliers\n• improper use by the Customer\n• force majeure events\n\nOvioPlus does not guarantee the absolute absence of errors or interruptions.' },
-    { id: 'assistenza', heading: 'Art. 7 Technical support', body: 'Support is provided according to the plan subscribed by the Customer. Interventions may be included in the fee, billed separately, or provided free of charge when so determined by contract or authorized by OvioPlus.' },
-    { id: 'proprieta', heading: 'Art. 8 Intellectual property', body: 'The software, source code, OvioPlus trademark, documentation, and all platform content are protected by intellectual property laws and remain the exclusive property of OvioPlus.' },
-    { id: 'modifiche', heading: 'Art. 9 Changes', body: 'OvioPlus may modify these Terms. New versions will be published on the website.' },
-    { id: 'legge', heading: 'Art. 10 Governing law', body: 'These Terms are governed by Italian law. For matters not expressly provided for, current legal provisions apply.' },
+    { id: 'oggetto', heading: 'Art. 1: Subject', body: 'These Terms govern the use of the OvioPlus software platform, accessible at ovioplus.com, intended for managing reservations, calls, and related services for restaurants and dining establishments.' },
+    { id: 'registrazione', heading: 'Art. 2: Registration', body: 'Access to the services is reserved for registered users. The Customer warrants that all information provided is truthful, current, and complete.' },
+    { id: 'licenza', heading: 'Art. 3: License of use', body: 'OvioPlus grants the Customer a personal, non-exclusive, non-transferable, and revocable license to use the platform for the duration of the contract.' },
+    { id: 'uso', heading: 'Art. 4: Acceptable use', body: 'The Customer agrees to use the service in compliance with applicable regulations and not to use the platform for unlawful, fraudulent purposes or in ways that could compromise the service.' },
+    { id: 'disponibilita', heading: 'Art. 5: Service availability', body: 'OvioPlus undertakes to adopt every reasonable measure to ensure service continuity. Interruptions may occur due to scheduled maintenance, updates, technical failures, network issues, third-party services, or force majeure.' },
+    { id: 'limitazione', heading: 'Art. 6: Limitation of liability', body: 'To the extent permitted by law, OvioPlus is not liable for direct or indirect damages resulting from:\n\n• Internet connection interruptions\n• temporary platform unavailability\n• failures attributable to third-party suppliers\n• improper use by the Customer\n• force majeure events\n\nOvioPlus does not guarantee the absolute absence of errors or interruptions.' },
+    { id: 'assistenza', heading: 'Art. 7: Technical support', body: 'Support is provided according to the plan subscribed by the Customer. Interventions may be included in the fee, billed separately, or provided free of charge when so determined by contract or authorized by OvioPlus.' },
+    { id: 'proprieta', heading: 'Art. 8: Intellectual property', body: 'The software, source code, OvioPlus trademark, documentation, and all platform content are protected by intellectual property laws and remain the exclusive property of OvioPlus.' },
+    { id: 'modifiche', heading: 'Art. 9: Changes', body: 'OvioPlus may modify these Terms. New versions will be published on the website.' },
+    { id: 'legge', heading: 'Art. 10: Governing law', body: 'These Terms are governed by Italian law. For matters not expressly provided for, current legal provisions apply.' },
   ],
 };
 
@@ -146,7 +146,7 @@ const COOKIES_IT: LegalDoc = {
     { id: 'marketing', heading: 'Cookie di marketing', body: 'Previo consenso dell\'utente, possono essere utilizzati cookie di terze parti per:\n\n• personalizzare gli annunci pubblicitari\n• effettuare attività di remarketing\n• misurare l\'efficacia delle campagne pubblicitarie\n\nQuesti cookie possono essere installati da piattaforme come Google, Meta (Facebook e Instagram), TikTok o altri partner pubblicitari.' },
     { id: 'social', heading: 'Cookie dei social network', body: 'Il sito può integrare pulsanti o contenuti provenienti da social network che consentono all\'utente di condividere contenuti o interagire direttamente con le piattaforme social. L\'utilizzo di tali servizi può comportare l\'installazione di cookie da parte dei rispettivi fornitori.' },
     { id: 'gestione', heading: 'Gestione dei cookie', body: 'L\'utente può modificare in qualsiasi momento le proprie preferenze attraverso il banner dei cookie presente sul sito oppure tramite le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito.' },
-    { id: 'titolare', heading: 'Titolare del trattamento', body: 'OvioPlus Email: contact@ovioplus.com' },
+    { id: 'titolare', heading: 'Titolare del trattamento', body: 'OvioPlus, Email: contact@ovioplus.com' },
     { id: 'aggiornamenti', heading: 'Aggiornamenti', body: 'La presente Cookie Policy potrà essere modificata in qualsiasi momento per adeguarsi a eventuali aggiornamenti normativi.' },
   ],
 };
@@ -164,7 +164,7 @@ const COOKIES_EN: LegalDoc = {
     { id: 'marketing', heading: 'Marketing cookies', body: 'With user consent, third-party cookies may be used to:\n\n• personalize advertising\n• carry out remarketing activities\n• measure advertising campaign effectiveness\n\nThese cookies may be installed by platforms like Google, Meta (Facebook and Instagram), TikTok, or other advertising partners.' },
     { id: 'social', heading: 'Social network cookies', body: 'The site may integrate buttons or content from social networks that allow users to share content or interact directly with social platforms. Use of these services may result in the installation of cookies by their respective providers.' },
     { id: 'gestione', heading: 'Managing cookies', body: 'You can modify your preferences at any time through the cookie banner on the site or through your browser settings. Disabling technical cookies may impair the proper functioning of the site.' },
-    { id: 'titolare', heading: 'Data controller', body: 'OvioPlus Email: contact@ovioplus.com' },
+    { id: 'titolare', heading: 'Data controller', body: 'OvioPlus, Email: contact@ovioplus.com' },
     { id: 'aggiornamenti', heading: 'Updates', body: 'This Cookie Policy may be modified at any time to adapt to regulatory updates.' },
   ],
 };

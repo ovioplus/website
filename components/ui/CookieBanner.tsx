@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { cn } from '@/lib/utils';
 
 /* ─────────────────────────────────────────────────────────────
-   Cookie consent GDPR compliant.
+   Cookie consent: GDPR compliant.
    - Shows banner on first visit
    - Choice stored in localStorage
    - Emits `cookie-consent-changed` event so integrations can react

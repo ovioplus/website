@@ -40,14 +40,14 @@ export function LegalShell({ slug }: Props) {
   return (
     <div className="container-page py-32 md:py-40">
       <div className="grid lg:grid-cols-[220px_1fr_220px] gap-12">
-        {/* Left doc switcher */}
+        {/* Left: doc switcher */}
         <aside className="hidden lg:block">
           <div className="sticky top-32">
             <LegalSidebar />
           </div>
         </aside>
 
-        {/* Main content */}
+        {/* Main: content */}
         <article className="min-w-0">
           <Reveal>
             <a
@@ -99,7 +99,7 @@ export function LegalShell({ slug }: Props) {
           </div>
         </article>
 
-        {/* Right section TOC */}
+        {/* Right: section TOC */}
         <aside className="hidden lg:block">
           <div className="sticky top-32">
             <p className="px-3 mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted">

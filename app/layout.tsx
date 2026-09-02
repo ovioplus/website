@@ -31,11 +31,11 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} AI Receptionist | Never Miss a Bookings`,
-    template: `%s ${SITE.name}`,
+    default: `${SITE.name}: AI Receptionist | Never Miss a Bookings`,
+    template: `%s: ${SITE.name}`,
   },
   description:
-    'OvioPlus is the AI receptionist for restaurants. Answer every phone call, chat and web booking 24/7 in Italian and English never miss a reservation again.',
+    'OvioPlus is the AI receptionist for restaurants. Answer every phone call, chat and web booking 24/7 in Italian and English. Never miss a reservation again.',
   metadataBase: new URL(SITE.url),
   keywords: [
     'restaurant reservation system',
@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     canonical: SITE.url,
   },
   openGraph: {
-    title: `${SITE.name} AI Receptionist for Restaurants`,
+    title: `${SITE.name}: AI Receptionist for Restaurants`,
     description:
-      'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English never miss a reservation again.',
+      'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English. Never miss a reservation again.',
     url: SITE.url,
     siteName: SITE.name,
     locale: 'it_IT',
@@ -72,13 +72,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: `${SITE.name} AI Receptionist for Restaurants`,
+        alt: `${SITE.name}: AI Receptionist for Restaurants`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} AI Receptionist for Restaurants`,
+    title: `${SITE.name}: AI Receptionist for Restaurants`,
     description:
       'OvioPlus answers every phone call, chat and web booking 24/7 in Italian and English.',
     images: ['/og-image.png'],

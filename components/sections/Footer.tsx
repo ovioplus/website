@@ -10,7 +10,7 @@ import { openCookiePreferences } from '@/components/ui/CookieBanner';
 import { FEATURES } from '@/lib/config';
 
 /* ─────────────────────────────────────────────────────────────
-   Company info replace these placeholders with real values
+   Company info: replace these placeholders with real values
    ───────────────────────────────────────────────────────────── */
 const COMPANY = {
   phone: '+39 3517372436',        // ← replace with real phone
@@ -56,12 +56,12 @@ export function Footer() {
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-cyan via-brand-cyan to-brand-cyan-dark p-6 sm:p-8 md:p-10 lg:p-14 mb-16 shadow-xl shadow-brand-cyan/20">
           {/* Mobile: illustration on top, text below · Desktop: side by side, centered */}
           <div className="flex flex-col lg:grid lg:grid-cols-[auto_auto] gap-6 sm:gap-8 lg:gap-24 xl:gap-32 items-center lg:justify-center">
-            {/* Illustration shown at all sizes but smaller on mobile */}
+            {/* Illustration: shown at all sizes but smaller on mobile */}
             <div className="flex flex-shrink-0 items-center justify-center pointer-events-none">
               <AiAgentIllustration />
             </div>
 
-            {/* Text + form full width on mobile so text isn't awkwardly centered */}
+            {/* Text + form: full width on mobile so text isn't awkwardly centered */}
             <div className="w-full lg:w-auto lg:max-w-none text-center lg:text-left">
               <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight mb-3 lg:whitespace-nowrap">
                 {t.footer.newsletter.title}
@@ -126,7 +126,7 @@ export function Footer() {
                 <p className="mt-3 text-white/90 text-xs max-w-md mx-auto lg:mx-0 lg:pl-5">{t.footer.newsletter.errorMessage}</p>
               )}
 
-              {/* Note centered on mobile, aligned with input text on desktop */}
+              {/* Note: centered on mobile, aligned with input text on desktop */}
               <p className="mt-4 text-white/70 text-xs max-w-md mx-auto lg:mx-0 lg:pl-5">{t.footer.newsletter.note}</p>
             </div>
           </div>
@@ -284,7 +284,7 @@ function SocialLink({
 }
 
 /**
- * AI Agent illustration an elegant, abstract SVG representation
+ * AI Agent illustration: an elegant, abstract SVG representation
  * of an AI receptionist: a soft avatar with headset + floating chat
  * bubbles + subtle sparkles. Sits inside a soft glass badge.
  */
@@ -310,7 +310,7 @@ function AiAgentIllustration() {
         {/* Halo ring behind agent */}
         <circle cx="120" cy="118" r="70" fill="none" stroke="#ffffff" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="4 6" />
 
-        {/* Headset top arc */}
+        {/* Headset: top arc */}
         <path
           d="M 66 118 Q 66 66 120 66 Q 174 66 174 118"
           fill="none"
@@ -337,14 +337,14 @@ function AiAgentIllustration() {
         {/* Avatar face (soft rounded rectangle) */}
         <rect x="82" y="94" width="76" height="70" rx="24" fill="url(#agent-body)" />
 
-        {/* Eyes friendly closed arcs */}
+        {/* Eyes: friendly closed arcs */}
         <path d="M 100 128 Q 106 122 112 128" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
         <path d="M 128 128 Q 134 122 140 128" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
 
         {/* Smile */}
         <path d="M 108 144 Q 120 152 132 144" stroke="#0F172A" strokeWidth="3" strokeLinecap="round" fill="none" />
 
-        {/* Floating chat bubble top left */}
+        {/* Floating chat bubble: top left */}
         <g>
           <path d="M 30 46 Q 30 34 42 34 L 76 34 Q 88 34 88 46 L 88 58 Q 88 70 76 70 L 52 70 L 42 78 L 46 70 L 42 70 Q 30 70 30 58 Z" fill="#ffffff" opacity="0.95" />
           <circle cx="46" cy="52" r="2.5" fill="#2CABE6" />
@@ -352,7 +352,7 @@ function AiAgentIllustration() {
           <circle cx="66" cy="52" r="2.5" fill="#2CABE6" />
         </g>
 
-        {/* Floating chat bubble bottom right */}
+        {/* Floating chat bubble: bottom right */}
         <g>
           <path d="M 152 190 Q 152 182 160 182 L 202 182 Q 210 182 210 190 L 210 206 Q 210 214 202 214 L 172 214 L 164 220 L 168 214 L 160 214 Q 152 214 152 206 Z" fill="#FFA042" opacity="0.9" />
           <circle cx="168" cy="198" r="2.5" fill="#ffffff" />

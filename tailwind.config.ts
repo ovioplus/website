@@ -9,20 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // OvioPlus brand deep blue base with purple + cyan accents
+        // OvioPlus brand: deep blue base with purple + cyan accents
         brand: {
-          // Brand colors kept consistent for buttons/accents
+          // Brand colors: kept consistent for buttons/accents
           cyan: '#2CABE6',
           'cyan-dark': '#1A8AC0',
           'cyan-light': '#5CC4F0',
           'cyan-50': '#E8F4FB',
           amber: '#FFA042',
-          // Light sky-blue theme soft pastel backgrounds
+          // Light sky-blue theme: soft pastel backgrounds
           ink: '#0F172A',          // Headline text, almost-black
-          surface: '#FFFFFF',       // Card surface pure white
+          surface: '#FFFFFF',       // Card surface: pure white
           'surface-2': '#F5F8FF',  // Soft tint surface
           'surface-3': '#E4EDFB',  // Deeper tint for hover/elevated
-          'sky': '#D7E7FA',         // Page background light sky blue
+          'sky': '#D7E7FA',         // Page background: light sky blue
           'sky-light': '#EAF3FE',  // Lighter sky
         },
         text: {

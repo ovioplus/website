@@ -37,7 +37,7 @@ export default function SitemapPage() {
         { icon: Workflow, label: t.nav.how, href: '/#how', desc: '5-step booking flow', show: true },
         { icon: Tag, label: t.nav.pricing, href: '/#pricing', desc: 'Starter · Pro · Scale plans', show: FEATURES.showPricing },
         { icon: HelpCircle, label: t.nav.faq, href: '/#faq', desc: 'Common questions', show: true },
-        { icon: MessageSquare, label: t.nav.bookDemo, href: '/#contact', desc: 'Talk to us no commitment', show: true },
+        { icon: MessageSquare, label: t.nav.bookDemo, href: '/#contact', desc: 'Talk to us, no commitment', show: true },
       ].filter((l) => l.show),
     },
     {
@@ -45,7 +45,7 @@ export default function SitemapPage() {
       links: [
         { icon: Info, label: t.footer.companyLinks.about, href: '/about', desc: 'Mission · values · team' },
         { icon: BookOpen, label: t.footer.companyLinks.blog, href: '/blog', desc: 'Product & industry updates' },
-        { icon: Handshake, label: t.footer.companyLinks.partnerships, href: '/partnerships', desc: 'Build with us software, POS, agencies' },
+        { icon: Handshake, label: t.footer.companyLinks.partnerships, href: '/partnerships', desc: 'Build with us: software, POS, agencies' },
         { icon: MessageSquare, label: t.footer.companyLinks.contact, href: '/contact', desc: 'All ways to reach us' },
       ],
     },

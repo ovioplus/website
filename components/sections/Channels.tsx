@@ -36,7 +36,7 @@ export function Channels() {
         </Reveal>
 
         <div className="grid lg:grid-cols-5 gap-5">
-          {/* Featured large card */}
+          {/* Featured: large card */}
           <motion.article
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -1,7 +1,7 @@
 import { LegalShell } from '@/components/legal/LegalShell';
 
 export const metadata = {
-  title: 'Non-Disclosure Agreement (NDA) OvioPlus',
+  title: 'Non-Disclosure Agreement (NDA): OvioPlus',
   description: 'Confidentiality agreement between parties.',
 };
 

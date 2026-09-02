@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SITE } from '@/lib/constants';
 
 /**
- * Sitemap Next.js auto-serves this at /sitemap.xml.
+ * Sitemap: Next.js auto-serves this at /sitemap.xml.
  * Google & Bing discover it automatically once you submit
  * the domain to Search Console.
  */
