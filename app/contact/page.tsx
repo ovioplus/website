@@ -55,7 +55,7 @@ export default function ContactPage() {
             })}
           </div>
 
-          {/* Small contact info block centered */}
+          {/* Small contact info block: centered */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

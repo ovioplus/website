@@ -1,7 +1,7 @@
 import { LegalShell } from '@/components/legal/LegalShell';
 
 export const metadata = {
-  title: 'Privacy Policy OvioPlus',
+  title: 'Privacy Policy | OvioPlus',
   description: 'How OvioPlus handles personal data, in accordance with the GDPR.',
 };
 

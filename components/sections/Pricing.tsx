@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const featuredIndex = 1;
 
-/** A feature line with an optional info tooltip hover or focus to reveal. */
+/** A feature line with an optional info tooltip: hover or focus to reveal. */
 function FeatureNote({ note }: { note: string }) {
   const [open, setOpen] = useState(false);
   return (

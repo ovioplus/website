@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 /**
  * 3D floating phone mockup with mock chat.
- * Pure CSS perspective + Framer Motion float no Three.js.
+ * Pure CSS perspective + Framer Motion float, no Three.js.
  */
 export function PhoneShowcase() {
   const { lang } = useLanguage();
@@ -73,10 +73,10 @@ export function PhoneShowcase() {
             </div>
           </Reveal>
 
-          {/* Right phone (static, no infinite animation) */}
+          {/* Right: phone (static, no infinite animation) */}
           <Reveal delay={0.2}>
             <div className="relative mx-auto">
-              {/* Static glow behind no animation */}
+              {/* Static glow behind, no animation */}
               <div
                 aria-hidden
                 className="absolute inset-0 -m-6 rounded-full pointer-events-none opacity-50"

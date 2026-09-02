@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     // Dev fallback: log to terminal when no API key is set
     if (!apiKey) {
-      console.log('\n[contact] new demo request (no RESEND_API_KEY not sent)');
+      console.log('\n[contact] new demo request (no RESEND_API_KEY, not sent)');
       console.log({ name, restaurant, email, phone, message });
       console.log(`Would have sent to: ${TO_ADDRESS}\n`);
       return NextResponse.json({ ok: true, mode: 'logged' });
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
 
     const html = `
       <div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-        <h1 style="font-size: 20px; margin: 0 0 16px;">New demo request OvioPlus</h1>
+        <h1 style="font-size: 20px; margin: 0 0 16px;">New demo request: OvioPlus</h1>
         <table style="width: 100%; border-collapse: collapse;">
           <tr><td style="padding: 8px 0; color: #666; width: 130px;">Name</td><td><strong>${escape(name)}</strong></td></tr>
           <tr><td style="padding: 8px 0; color: #666;">Restaurant</td><td>${escape(restaurant) || '—'}</td></tr>
@@ -62,7 +62,7 @@ export async function POST(req: Request) {
       from: FROM_ADDRESS,
       to: TO_ADDRESS,
       replyTo: email,
-      subject: `Demo request ${name}${restaurant ? ` (${restaurant})` : ''}`,
+      subject: `Demo request: ${name}${restaurant ? ` (${restaurant})` : ''}`,
       html,
     });
 

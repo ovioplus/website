@@ -21,7 +21,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Nav links respect FEATURES toggles hidden sections are also hidden from nav
+  // Nav links respect FEATURES toggles; hidden sections are also hidden from nav
   const navLinks = [
     { label: t.nav.features, href: '/#features', show: true },
     { label: t.nav.how, href: '/#how', show: true },
