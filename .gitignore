@@ -2,6 +2,9 @@ node_modules
 .next
 out
 dist
+# env — NEVER commit secrets. `.env*.local` alone missed a bare `.env`,
+# which is where a Resend key would most likely end up.
+.env
 .env*.local
 .DS_Store
 *.log
