@@ -70,6 +70,32 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-09-05 — CI added, ESLint set up for the first time, dead copy removed
+
+Added GitHub Actions CI (typecheck · lint · build on every push and PR).
+It failed on its first run and was immediately worth it: this repo had a
+`lint` script but **no ESLint config**, so `next lint` fell through to its
+interactive setup wizard — passes locally by opening a prompt, fails in CI.
+Nothing here had ever been linted. Added a flat config mirroring the
+platform's, moved off the deprecated `next lint` to the ESLint CLI, and fixed
+all 8 errors + 4 warnings. Two mattered: `Logo.tsx` called `useId()` after two
+early returns (a conditional hook — real Rules-of-Hooks violation), and six
+internal `<a href="/">` links were forcing full page reloads instead of
+client-side navigation.
+
+Also deleted ~130 lines of dead copy from `lib/constants.ts` — only `SITE` was
+ever imported. The orphaned `PRICING` array still advertised 300/1,500 voice
+minutes against the enforced 200/500, and it fooled me into flagging a
+customer-facing pricing bug that never existed (the live page renders from
+`translations.ts`, which was correct). **The loose end about a voice-minute
+mismatch, below, is therefore resolved — it was never real.** Added a bare
+`.env` to gitignore, which only covered `.env*.local`.
+
+Earlier the same day: re-punctuated the copy broken by the em-dash-stripping
+commit (`4d725eb`) without reintroducing em-dashes — the user finds them
+AI-flavoured, so each spot got whatever punctuation fit (colon, comma, period,
+semicolon), and `|` for bare page-title/brand pairs.
+
 ### 2026-09-02 — Audit + history-tracking setup
 
 Prior Claude Code session(s)' chat history was deleted; user asked for an
