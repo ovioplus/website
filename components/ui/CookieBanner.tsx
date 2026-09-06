@@ -25,14 +25,6 @@ export type ConsentState = {
   version: number;
 };
 
-const DEFAULT_CONSENT: ConsentState = {
-  necessary: true,
-  analytics: false,
-  marketing: false,
-  timestamp: 0,
-  version: CONSENT_VERSION,
-};
-
 function readConsent(): ConsentState | null {
   if (typeof window === 'undefined') return null;
   try {

@@ -25,6 +25,11 @@ export function Logo({
   showWordmark = true,
   className = '',
 }: LogoProps) {
+  // Must run before any early return: hooks have to be called in the same
+  // order on every render, and the two `variant` branches below return early.
+  // Only the inline-SVG fallback uses this, but React doesn't care.
+  const rawId = useId();
+
   if (variant === 'icon') {
     return (
       <span className={cn('inline-flex items-center gap-3', className)}>
@@ -62,7 +67,6 @@ export function Logo({
   }
 
   // Inline SVG fallback: infinity with embedded plus
-  const rawId = useId();
   const id = `og-${rawId.replace(/:/g, '')}`;
   const w = size;
   const h = size * 0.55;

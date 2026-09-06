@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Outfit, JetBrains_Mono } from 'next/font/google';
 import { SITE } from '@/lib/constants';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
-// @ts-ignore
 import './globals.css';
 import { BackToTopButton } from '@/components/sections/BackToTopButton';
 import { CookieBanner } from '@/components/ui/CookieBanner';

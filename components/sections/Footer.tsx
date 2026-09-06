@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Loader2, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { SITE } from '@/lib/constants';
 import { useLanguage } from '@/lib/i18n/LanguageContext';

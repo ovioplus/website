@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, Mail, Phone, ArrowRight } from 'lucide-react';
+import { Calendar, Mail, Phone } from 'lucide-react';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
 import { PageShell } from '@/components/sections/PageShell';

@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
@@ -30,13 +31,13 @@ export function PageShell({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-muted hover:text-brand-cyan transition-colors mb-8"
           >
             <ArrowLeft className="w-3 h-3" />
             {t.pages.backHome}
-          </a>
+          </Link>
 
           <span className="inline-block font-mono text-xs uppercase tracking-[0.18em] text-brand-cyan mb-4">
             {eyebrow}

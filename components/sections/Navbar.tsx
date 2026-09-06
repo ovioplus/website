@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
@@ -46,9 +47,9 @@ export function Navbar() {
           )}
           style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
         >
-          <a href="/" aria-label="OvioPlus home" className="flex-shrink-0">
+          <Link href="/" aria-label="OvioPlus home" className="flex-shrink-0">
             <Logo variant="icon" size={36} />
-          </a>
+          </Link>
 
           <ul className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
@@ -71,10 +72,10 @@ export function Navbar() {
             >
               {t.nav.signIn}
             </a>
-            <a href="/#contact" className="btn-primary text-sm py-2 px-4 group">
+            <Link href="/#contact" className="btn-primary text-sm py-2 px-4 group">
               {t.nav.bookDemo}
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </Link>
           </div>
 
           <button
@@ -138,9 +139,9 @@ export function Navbar() {
               </motion.li>
               <li className="pt-8 flex items-center justify-between">
                 <LanguageToggle />
-                <a href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary">
+                <Link href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary">
                   {t.nav.bookDemo}
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>

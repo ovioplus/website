@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Calendar, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { LEGAL_DOCS, type LegalDoc } from '@/lib/i18n/legal';
@@ -50,13 +51,13 @@ export function LegalShell({ slug }: Props) {
         {/* Main: content */}
         <article className="min-w-0">
           <Reveal>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-muted hover:text-brand-cyan transition-colors mb-8"
             >
               <ChevronRight className="w-3 h-3 rotate-180" />
               {lang === 'it' ? 'Torna al sito' : 'Back to site'}
-            </a>
+            </Link>
 
             <header className="mb-12 pb-8 border-b border-line">
               <h1 className="font-display text-display-md font-semibold text-balance mb-3">

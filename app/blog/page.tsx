@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { PenLine, Sparkles, ArrowRight } from 'lucide-react';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
@@ -48,13 +49,13 @@ export default function BlogPage() {
                 ))}
               </div>
 
-              <a
+              <Link
                 href="/#contact"
                 className="mt-10 btn-primary text-sm inline-flex group"
               >
                 {lang === 'it' ? 'Prenota una demo' : 'Book a demo'}
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </PageShell>
