@@ -70,6 +70,34 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-09-22 — Legal docs rewritten to match the product (PR #3, unmerged)
+
+A cold compliance-sales email (NORMQ) claimed to have "reviewed" the AI
+touchpoints and quoted the AI Act's €35M/7% tier at us. That tier is for
+prohibited practices under Art. 5, not transparency; Art. 50 sits at €15M/3%,
+and Art. 99(6) caps SME fines at whichever of the percentage or the sum is
+**lower**, which for us means 3% of turnover, not millions. The email contained
+no actual finding, just our own marketing copy played back, and it switched to
+Spanish for exactly the paragraph about fines. Template blast. **Don't pay it,
+don't reply.**
+
+They were still right by accident, and the audit it prompted found worse things
+than the one they guessed at. The legal docs here were a competent *generic*
+SaaS set that described a different product: `allerg` 0 hits, `OpenAI` 0,
+`health` 0, `Article 9` 0. This PR adds the sub-processor list (Art. 28(2)
+requires disclosure and a right to object, and we named none of the seven),
+the Art. 9 health-data basis for allergy info, and retention periods that match
+what the platform now actually enforces.
+
+**Two things only Ayoub can answer**, both flagged in the PR: the docs say
+`contact@ovioplus.com` and name `ovioplus.com` as the platform domain, while
+CLAUDE.md and the app use `ovioplus.ai`; and the DPA identifies the controller
+as just "OvioPlus" with no legal entity, registered address or VAT number. I
+deliberately did not guess at either.
+
+Not lawyer-reviewed. IT stays authoritative, EN is the translation.
+Counterparts in `ovioplus-platform`: PR #21 (disclosure) and #22 (retention).
+
 ### 2026-09-05 — CI added, ESLint set up for the first time, dead copy removed
 
 Added GitHub Actions CI (typecheck · lint · build on every push and PR).
