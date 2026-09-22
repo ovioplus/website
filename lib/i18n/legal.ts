@@ -21,7 +21,7 @@ const PRIVACY_IT: LegalDoc = {
   slug: 'privacy',
   title: 'Informativa Privacy',
   subtitle: 'Per i clienti finali: trattamento dei dati personali',
-  lastUpdated: '27 Giugno 2026',
+  lastUpdated: '22 Settembre 2026',
   sections: [
     {
       id: 'data',
@@ -42,10 +42,22 @@ const PRIVACY_IT: LegalDoc = {
         'I dati sono trattati esclusivamente per:\n\n• registrare e gestire la prenotazione\n• comunicare eventuali modifiche\n• migliorare l\'organizzazione del servizio',
     },
     {
+      id: 'allergie',
+      heading: 'Allergie e informazioni sulla salute',
+      body:
+        "Se comunichi allergie, intolleranze o altre esigenze alimentari, tali informazioni costituiscono dati relativi alla salute ai sensi dell'art. 9 del GDPR e ricevono una tutela rafforzata.\n\nVengono raccolte soltanto se sei tu a fornirle spontaneamente, sulla base del tuo consenso esplicito, e per un'unica finalità: permettere alla cucina di prepararti il pasto in sicurezza. Non sono utilizzate per profilazione né per finalità di marketing, e non sono comunicate a terzi diversi dal ristorante.\n\nPuoi chiedere in qualsiasi momento che non vengano registrate, oppure che vengano cancellate.",
+    },
+    {
+      id: 'assistente-ai',
+      heading: 'Assistente AI',
+      body:
+        "La prenotazione può essere gestita da un assistente basato su intelligenza artificiale, via chat o al telefono. Ti viene sempre comunicato all'inizio dell'interazione che stai parlando con un sistema di IA, come previsto dall'art. 50 del Regolamento (UE) 2024/1689 (AI Act), e puoi chiedere in qualsiasi momento di essere messo in contatto con una persona.\n\nIl contenuto della conversazione è elaborato da un fornitore terzo per generare le risposte. Non viene adottata alcuna decisione automatizzata che produca effetti giuridici nei tuoi confronti ai sensi dell'art. 22 del GDPR.",
+    },
+    {
       id: 'conservazione',
       heading: 'Conservazione',
       body:
-        'I dati sono conservati per il tempo necessario alle finalità per cui sono stati raccolti e secondo quanto previsto dal Titolare del trattamento.',
+        'I dati sono conservati per il tempo necessario alle finalità per cui sono stati raccolti. Salvo diversa indicazione del Titolare, si applicano i seguenti termini:\n\n• trascrizioni delle conversazioni con l\'assistente AI: 90 giorni\n• note e richieste particolari collegate a una prenotazione, incluse le informazioni sulle allergie: 12 mesi dalla data della prenotazione\n• dati identificativi del cliente: 24 mesi dall\'ultima prenotazione, dopodiché sono resi anonimi in modo irreversibile\n\nIl ristorante, in qualità di Titolare, può stabilire termini diversi.',
     },
     {
       id: 'diritti',
@@ -60,7 +72,7 @@ const PRIVACY_EN: LegalDoc = {
   slug: 'privacy',
   title: 'Privacy Policy',
   subtitle: 'For end customers: processing of personal data',
-  lastUpdated: 'June 27, 2026',
+  lastUpdated: 'September 22, 2026',
   sections: [
     {
       id: 'data',
@@ -81,10 +93,22 @@ const PRIVACY_EN: LegalDoc = {
         'Data is processed exclusively to:\n\n• register and manage the reservation\n• communicate any changes\n• improve service organization',
     },
     {
+      id: 'allergie',
+      heading: 'Allergies and health information',
+      body:
+        "If you tell us about allergies, intolerances or other dietary requirements, that information is health data under Art. 9 of the GDPR and receives heightened protection.\n\nIt is collected only if you volunteer it, on the basis of your explicit consent, and for a single purpose: letting the kitchen prepare your meal safely. It is not used for profiling or marketing, and is not shared with anyone other than the restaurant.\n\nYou can ask at any time for it not to be recorded, or to have it deleted.",
+    },
+    {
+      id: 'assistente-ai',
+      heading: 'AI assistant',
+      body:
+        "Your reservation may be handled by an artificial-intelligence assistant, by chat or by phone. You are always told at the start of the interaction that you are speaking with an AI system, as required by Art. 50 of Regulation (EU) 2024/1689 (the AI Act), and you can ask to be put through to a person at any point.\n\nThe content of the conversation is processed by a third-party provider in order to generate replies. No automated decision producing legal effects concerning you is taken within the meaning of Art. 22 of the GDPR.",
+    },
+    {
       id: 'conservazione',
       heading: 'Retention',
       body:
-        'Data is retained for the time necessary for the purposes for which it was collected and according to the provisions of the Data Controller.',
+        'Data is retained for as long as necessary for the purposes it was collected for. Unless the Controller specifies otherwise, the following periods apply:\n\n• transcripts of conversations with the AI assistant: 90 days\n• notes and special requests attached to a reservation, including allergy information: 12 months from the reservation date\n• guest identifying data: 24 months from the last reservation, after which it is irreversibly anonymised\n\nThe restaurant, as Controller, may set different periods.',
     },
     {
       id: 'diritti',
@@ -173,13 +197,14 @@ const DPA_IT: LegalDoc = {
   slug: 'dpa',
   title: 'Accordo sul Trattamento dei Dati (DPA)',
   subtitle: 'Ai sensi dell\'art. 28 del Regolamento (UE) 2016/679 (GDPR)',
-  lastUpdated: '27 Giugno 2026',
+  lastUpdated: '22 Settembre 2026',
   sections: [
     { id: 'parti', heading: 'Parti', body: 'Il presente Accordo disciplina il trattamento dei dati personali effettuato da OvioPlus quale Responsabile del trattamento per conto del Cliente, Titolare del trattamento, ai sensi dell\'art. 28 del Regolamento (UE) 2016/679 (GDPR).' },
     { id: 'oggetto', heading: 'Oggetto', body: 'OvioPlus tratta i dati esclusivamente per fornire il servizio di gestione delle prenotazioni e delle comunicazioni con i clienti del ristorante.' },
-    { id: 'categorie', heading: 'Categorie di dati', body: '• Nome e cognome\n• Numero di telefono\n• Indirizzo email (se raccolto)\n• Data e ora della prenotazione\n• Numero di coperti\n• Eventuali note relative alla prenotazione' },
+    { id: 'categorie', heading: 'Categorie di dati', body: '• Nome e cognome\n• Numero di telefono\n• Indirizzo email (se raccolto)\n• Data e ora della prenotazione\n• Numero di coperti\n• Eventuali note relative alla prenotazione\n• Informazioni su allergie, intolleranze o esigenze alimentari, se comunicate dal cliente: si tratta di dati relativi alla salute ai sensi dell\'art. 9 GDPR, trattati sulla base del consenso esplicito dell\'interessato e per la sola finalità di consentire una preparazione sicura del pasto\n• Trascrizioni delle conversazioni con l\'assistente AI' },
     { id: 'finalita', heading: 'Finalità', body: 'I dati sono trattati esclusivamente per:\n\n• gestione delle prenotazioni\n• assistenza tecnica\n• manutenzione della piattaforma\n• sicurezza del servizio\n\nOvioPlus non utilizza tali dati per finalità di marketing proprie, salvo consenso espresso o diversa base giuridica.' },
     { id: 'sicurezza', heading: 'Misure di sicurezza', body: 'OvioPlus adotta misure tecniche e organizzative adeguate, tra cui:\n\n• connessioni cifrate (HTTPS/TLS)\n• autenticazione degli utenti\n• controllo degli accessi\n• backup periodici\n• monitoraggio della sicurezza' },
+    { id: 'subresponsabili', heading: 'Sub-responsabili del trattamento', body: "Per erogare il servizio, OvioPlus si avvale dei seguenti sub-responsabili, autorizzati ai sensi dell\u2019art. 28, par. 2 e 4, del GDPR:\n\n\u2022 Vercel \u2014 hosting dell\u2019applicazione\n\u2022 Neon \u2014 database (archiviazione nella regione UE)\n\u2022 Clerk \u2014 autenticazione degli account del ristorante\n\u2022 OpenAI \u2014 elaborazione delle conversazioni dell\u2019assistente AI\n\u2022 Twilio \u2014 telefonia e instradamento delle chiamate\n\u2022 Resend \u2014 invio delle email transazionali (conferme e promemoria)\n\u2022 Upstash \u2014 limitazione del traffico e contatori di utilizzo\n\u2022 Stripe \u2014 pagamento dell\u2019abbonamento del ristorante; non tratta dati dei clienti finali\n\nAlcuni di questi fornitori possono trattare dati al di fuori dello Spazio Economico Europeo. In tali casi il trasferimento avviene sulla base delle Clausole Contrattuali Tipo adottate dalla Commissione europea.\n\nOvioPlus comunicher\u00e0 al Cliente ogni modifica relativa all\u2019aggiunta o alla sostituzione di un sub-responsabile con ragionevole preavviso, riconoscendo al Cliente il diritto di opporsi." },
     { id: 'breach', heading: 'Data Breach', body: 'In caso di violazione dei dati personali, OvioPlus informerà il Cliente senza ingiustificato ritardo, fornendo le informazioni necessarie per gli adempimenti previsti dal GDPR.' },
     { id: 'durata', heading: 'Durata', body: 'Il presente Accordo resta efficace per tutta la durata del rapporto contrattuale tra le parti.' },
   ],
@@ -189,13 +214,14 @@ const DPA_EN: LegalDoc = {
   slug: 'dpa',
   title: 'Data Processing Agreement (DPA)',
   subtitle: 'Pursuant to Art. 28 of Regulation (EU) 2016/679 (GDPR)',
-  lastUpdated: 'June 27, 2026',
+  lastUpdated: 'September 22, 2026',
   sections: [
     { id: 'parti', heading: 'Parties', body: 'This Agreement governs the processing of personal data carried out by OvioPlus as Data Processor on behalf of the Customer, Data Controller, pursuant to Art. 28 of Regulation (EU) 2016/679 (GDPR).' },
     { id: 'oggetto', heading: 'Subject', body: 'OvioPlus processes data exclusively to provide the reservation management service and communications with restaurant customers.' },
-    { id: 'categorie', heading: 'Data categories', body: '• First and last name\n• Phone number\n• Email address (if collected)\n• Reservation date and time\n• Number of covers\n• Any notes related to the reservation' },
+    { id: 'categorie', heading: 'Data categories', body: '• First and last name\n• Phone number\n• Email address (if collected)\n• Reservation date and time\n• Number of covers\n• Any notes related to the reservation\n• Allergy, intolerance or dietary information where the guest provides it: this is health data under Art. 9 GDPR, processed on the basis of the data subject\u2019s explicit consent and for the sole purpose of allowing the meal to be prepared safely\n• Transcripts of conversations with the AI assistant' },
     { id: 'finalita', heading: 'Purposes', body: 'Data is processed exclusively for:\n\n• reservation management\n• technical support\n• platform maintenance\n• service security\n\nOvioPlus does not use this data for its own marketing purposes, except with express consent or under a different legal basis.' },
     { id: 'sicurezza', heading: 'Security measures', body: 'OvioPlus adopts appropriate technical and organizational measures, including:\n\n• encrypted connections (HTTPS/TLS)\n• user authentication\n• access control\n• regular backups\n• security monitoring' },
+    { id: 'subresponsabili', heading: 'Sub-processors', body: "To deliver the service, OvioPlus uses the following sub-processors, authorised under Art. 28(2) and (4) of the GDPR:\n\n\u2022 Vercel \u2014 application hosting\n\u2022 Neon \u2014 database (stored in the EU region)\n\u2022 Clerk \u2014 authentication of restaurant accounts\n\u2022 OpenAI \u2014 processing of AI assistant conversations\n\u2022 Twilio \u2014 telephony and call routing\n\u2022 Resend \u2014 transactional email delivery (confirmations and reminders)\n\u2022 Upstash \u2014 rate limiting and usage counters\n\u2022 Stripe \u2014 restaurant subscription payments; does not process end-guest data\n\nSome of these providers may process data outside the European Economic Area. Where that happens, the transfer relies on the Standard Contractual Clauses adopted by the European Commission.\n\nOvioPlus will give the Customer reasonable notice of any addition or replacement of a sub-processor, and the Customer has the right to object." },
     { id: 'breach', heading: 'Data Breach', body: 'In case of personal data breach, OvioPlus will inform the Customer without undue delay, providing the necessary information for GDPR compliance.' },
     { id: 'durata', heading: 'Duration', body: 'This Agreement remains effective for the entire duration of the contractual relationship between the parties.' },
   ],
