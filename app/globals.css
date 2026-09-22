@@ -147,3 +147,29 @@
   pointer-events: none;
   z-index: 0;
 }
+
+/* Idle float for the back-to-top control.
+   In CSS rather than framer-motion for two reasons: framer-motion would not
+   reliably start a repeating keyframe loop when the value flips from a scalar
+   to an array after mount, and the media queries below are exactly the gating
+   this needs. It lives on a wrapper element so it never fights framer-motion
+   for the transform on the button itself.
+   Only on devices that hover: on a touch screen a permanently moving target
+   drifts under the finger between touchstart and touchend, which loses taps. */
+@media (hover: hover) and (pointer: fine) {
+  @media (prefers-reduced-motion: no-preference) {
+    .float-idle {
+      animation: float-idle 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes float-idle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
