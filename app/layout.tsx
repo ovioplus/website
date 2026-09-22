@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Outfit, JetBrains_Mono } from 'next/font/google';
 import { SITE } from '@/lib/constants';
+import { LANG_BOOT_SCRIPT } from '@/lib/i18n/lang-boot';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import './globals.css';
 import { BackToTopButton } from '@/components/sections/BackToTopButton';
@@ -155,6 +156,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="min-h-screen overflow-x-hidden">
+        {/* Sets <html lang> during parse, before Chrome's translation detector
+            runs. Must be first in <body>: see lib/i18n/lang-boot.ts. */}
+        <script dangerouslySetInnerHTML={{ __html: LANG_BOOT_SCRIPT }} />
         {/* SEO structured data */}
         <script
           type="application/ld+json"
