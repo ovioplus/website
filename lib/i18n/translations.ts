@@ -260,6 +260,7 @@ export const translations = {
       },
       companyLinks: {
         about: 'About',
+        trust: 'AI Trust & Compliance',
         blog: 'Blog',
         partnerships: 'Partnerships',
         sitemap: 'Sitemap',
@@ -300,6 +301,49 @@ export const translations = {
     },
     pages: {
       backHome: 'Back to home',
+      trust: {
+        eyebrow: 'AI Trust & Compliance',
+        title: 'AI built with transparency, security and responsibility.',
+        subtitle:
+          'Adopting AI in hospitality only works if it is built on transparency, security, privacy and responsible governance. OvioPlus brings AI Voice, AI Chat and reservation management into one platform, so restaurants can automate guest conversations while keeping control of their operations.',
+        pillars: {
+          heading: 'How we approach it',
+          items: [
+            {
+              title: 'Responsible AI',
+              body: 'Transparency is a design principle, not a disclaimer. Anyone speaking or writing to an OvioPlus assistant is told, at the first interaction and in their own language, that they are interacting with an AI system, and can ask to be passed to a member of staff at any point.',
+            },
+            {
+              title: 'Privacy and data protection',
+              body: 'Guest data is stored in the European Union. We publish the retention period for every category of data we hold, name every sub-processor in our DPA, and apply appropriate technical and organisational measures under the GDPR (EU) 2016/679.',
+            },
+            {
+              title: 'European AI Act',
+              body: 'We track the requirements of Regulation (EU) 2024/1689, in particular the Article 50 transparency obligations that apply to systems interacting directly with people. Our review covers AI interactions, customer disclosures, documentation and operational processes as the framework develops.',
+            },
+            {
+              title: 'Security and continuous improvement',
+              body: 'Compliance is a process, not a certificate. We keep evaluating the platform, the infrastructure and the AI workflows to find risks, strengthen safeguards and improve the reliability of the service.',
+            },
+          ],
+        },
+        specifics: {
+          heading: 'What that means in practice',
+          items: [
+            'Guests are told they are speaking with an AI at the first interaction, on the phone and in chat, in Italian and English.',
+            'Ask the assistant whether it is human and it will tell you plainly that it is not.',
+            'Allergy information is health data. It is collected only if you volunteer it, used solely so the kitchen can cook safely for you, and never used for profiling or marketing.',
+            'Conversation transcripts are deleted after 90 days; reservation notes after 12 months; guest records are anonymised after 24 months of inactivity.',
+            'No automated decision producing legal effects is taken about a guest.',
+          ],
+          docsLead: 'The detail is in the documents, not just on this page:',
+        },
+        commitment: {
+          eyebrow: 'Our commitment',
+          heading: 'Transparency. Security. Privacy. Responsible AI.',
+          body: 'These principles guide how OvioPlus is built. Our aim is AI that restaurants can adopt with confidence: powerful enough to automate, transparent enough to trust, and designed with responsibility at its core.',
+        },
+      },
       about: {
         eyebrow: 'About',
         title: 'Building the AI that fills tables.',
@@ -644,6 +688,7 @@ export const translations = {
       },
       companyLinks: {
         about: 'Chi siamo',
+        trust: 'AI, fiducia e conformità',
         blog: 'Blog',
         partnerships: 'Partnership',
         sitemap: 'Mappa del sito',
@@ -684,6 +729,49 @@ export const translations = {
     },
     pages: {
       backHome: 'Torna alla home',
+      trust: {
+        eyebrow: 'AI, fiducia e conformità',
+        title: 'Un\'AI costruita su trasparenza, sicurezza e responsabilità.',
+        subtitle:
+          'L\'adozione dell\'intelligenza artificiale nella ristorazione funziona solo se poggia su trasparenza, sicurezza, privacy e una governance responsabile. OvioPlus riunisce AI Voice, AI Chat e gestione delle prenotazioni in un\'unica piattaforma, così i ristoranti automatizzano le conversazioni con i clienti mantenendo il controllo del proprio servizio.',
+        pillars: {
+          heading: 'Il nostro approccio',
+          items: [
+            {
+              title: 'AI responsabile',
+              body: 'La trasparenza è un principio di progettazione, non una nota a piè di pagina. Chi parla o scrive a un assistente OvioPlus viene informato, fin dalla prima interazione e nella propria lingua, che sta interagendo con un sistema di intelligenza artificiale, e può chiedere in qualsiasi momento di essere messo in contatto con una persona.',
+            },
+            {
+              title: 'Privacy e protezione dei dati',
+              body: 'I dati dei clienti sono archiviati nell\'Unione Europea. Pubblichiamo i tempi di conservazione per ogni categoria di dati, indichiamo nel nostro DPA tutti i sub-responsabili del trattamento e adottiamo misure tecniche e organizzative adeguate ai sensi del GDPR (UE) 2016/679.',
+            },
+            {
+              title: 'AI Act europeo',
+              body: 'Seguiamo i requisiti del Regolamento (UE) 2024/1689, in particolare gli obblighi di trasparenza dell\'art. 50 applicabili ai sistemi che interagiscono direttamente con le persone. La nostra revisione riguarda le interazioni AI, le informative ai clienti, la documentazione e i processi operativi, con l\'evolversi del quadro normativo.',
+            },
+            {
+              title: 'Sicurezza e miglioramento continuo',
+              body: 'La conformità è un processo, non un certificato. Continuiamo a valutare piattaforma, infrastruttura e flussi AI per individuare rischi, rafforzare le tutele e migliorare l\'affidabilità del servizio.',
+            },
+          ],
+        },
+        specifics: {
+          heading: 'Cosa significa in concreto',
+          items: [
+            'Il cliente viene informato di parlare con un\'AI fin dalla prima interazione, al telefono e in chat, in italiano e in inglese.',
+            'Se chiede all\'assistente se sia una persona, riceve una risposta chiara: non lo è.',
+            'Le informazioni sulle allergie sono dati sanitari. Vengono raccolte solo se è il cliente a fornirle, usate unicamente per permettere alla cucina di preparare il pasto in sicurezza, mai per profilazione o marketing.',
+            'Le trascrizioni delle conversazioni sono cancellate dopo 90 giorni, le note di prenotazione dopo 12 mesi, i dati identificativi resi anonimi dopo 24 mesi di inattività.',
+            'Non viene adottata alcuna decisione automatizzata che produca effetti giuridici sul cliente.',
+          ],
+          docsLead: 'Il dettaglio è nei documenti, non solo in questa pagina:',
+        },
+        commitment: {
+          eyebrow: 'Il nostro impegno',
+          heading: 'Trasparenza. Sicurezza. Privacy. AI responsabile.',
+          body: 'Questi principi guidano lo sviluppo di OvioPlus. L\'obiettivo è un\'AI che i ristoranti possano adottare con fiducia: abbastanza potente da automatizzare, abbastanza trasparente da meritare fiducia, e progettata con la responsabilità al centro.',
+        },
+      },
       about: {
         eyebrow: 'Chi siamo',
         title: 'Costruiamo l\'AI che riempie i tavoli.',

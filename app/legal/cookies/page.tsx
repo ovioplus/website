@@ -1,7 +1,7 @@
 import { LegalShell } from '@/components/legal/LegalShell';
 
 export const metadata = {
-  title: 'Cookie Policy | OvioPlus',
+  title: 'Cookie Policy',
   description: 'How OvioPlus uses cookies and similar technologies.',
 };
 

@@ -181,6 +181,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <FooterLink href="/about">{t.footer.companyLinks.about}</FooterLink>
+              <FooterLink href="/trust">{t.footer.companyLinks.trust}</FooterLink>
               <FooterLink href="/blog">{t.footer.companyLinks.blog}</FooterLink>
               <FooterLink href="/partnerships">{t.footer.companyLinks.partnerships}</FooterLink>
               <FooterLink href="/site-map">{t.footer.companyLinks.sitemap}</FooterLink>
