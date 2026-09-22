@@ -100,6 +100,10 @@ export const viewport: Viewport = {
   themeColor: '#2CABE6',
   width: 'device-width',
   initialScale: 1,
+  // Required for env(safe-area-inset-*) to report anything but 0 on notched
+  // iPhones. Without it a fixed element pinned near the bottom sits under the
+  // home indicator and Safari's toolbar, and taps land on browser chrome.
+  viewportFit: 'cover',
 };
 
 // JSON-LD structured data - helps Google Search understand what you are
