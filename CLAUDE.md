@@ -70,6 +70,37 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-09-22 — Back-to-top button didn't work on phones (#7)
+
+Three mobile-only defects in one small component, worth remembering because
+the first two will recur in any fixed-position element added here.
+
+**Safe-area insets.** The button was pinned at a flat `bottom: 24px`, which on
+a notched iPhone is inside the home-indicator strip and under Safari's bottom
+toolbar, so taps reach browser chrome. Fixed with
+`env(safe-area-inset-bottom/right)` — **and `viewportFit: 'cover'` in the root
+layout's viewport export, without which those insets report 0 no matter what
+the CSS asks for.** Nothing on the site used safe-area insets before this.
+
+**Invisible ≠ inert.** It was only animated to `opacity: 0` and kept
+`pointer-events: auto`, so an unseeable 51px target sat in the bottom-right
+corner eating taps meant for the page. Now `pointer-events: none` plus
+`aria-hidden` and `tabIndex={-1}` when hidden.
+
+**Sticky hover.** `whileHover` fires from `pointerenter`, which touch devices
+dispatch on tap, so the button froze at `scale(1.15)` after the first press.
+Gated behind `(hover: hover) and (pointer: fine)`.
+
+The idle float is now a **CSS** animation on a wrapper, not a framer-motion
+keyframe: framer-motion will not reliably start a repeating loop when the value
+flips from a scalar to an array after mount, and my first attempt at this fix
+silently killed the float on desktop because of exactly that.
+
+Caveat on the diagnosis: the browser pane sends mouse clicks, not touch
+sequences, so the original failure was never reproduced end to end. The
+safe-area conclusion rests on measured geometry. If it still misbehaves on a
+real phone, that is the assumption to re-test first.
+
 ### 2026-09-22 (latest) — html lang fix (#6), and a pnpm mess I made (#5)
 
 **This repo is npm-managed.** CI runs `npm ci`, `package-lock.json` is the
