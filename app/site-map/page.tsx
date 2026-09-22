@@ -1,23 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Home,
-  Sparkles,
-  Workflow,
-  Tag,
-  HelpCircle,
-  MessageSquare,
-  Info,
-  Handshake,
-  BookOpen,
-  Shield,
-  FileText,
-  Cookie,
-  Lock,
-  Key,
-  ArrowRight,
-} from 'lucide-react';
+import { ArrowRight, BookOpen, Cookie, FileText, Handshake, HelpCircle, Home, Info, Key, Lock, MessageSquare, Shield, ShieldCheck, Sparkles, Tag, Workflow } from 'lucide-react';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
 import { PageShell } from '@/components/sections/PageShell';
@@ -44,6 +28,7 @@ export default function SitemapPage() {
       title: p.sections.company,
       links: [
         { icon: Info, label: t.footer.companyLinks.about, href: '/about', desc: 'Mission · values · team' },
+        { icon: ShieldCheck, label: t.footer.companyLinks.trust, href: '/trust', desc: 'AI transparency · GDPR · EU AI Act' },
         { icon: BookOpen, label: t.footer.companyLinks.blog, href: '/blog', desc: 'Product & industry updates' },
         { icon: Handshake, label: t.footer.companyLinks.partnerships, href: '/partnerships', desc: 'Build with us: software, POS, agencies' },
         { icon: MessageSquare, label: t.footer.companyLinks.contact, href: '/contact', desc: 'All ways to reach us' },

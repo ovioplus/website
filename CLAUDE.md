@@ -70,7 +70,37 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
-### 2026-09-22 — Legal docs rewritten to match the product (PR #3, unmerged)
+### 2026-09-22 (later) — /trust page, EN + IT (PR #4)
+
+A public AI Trust & Compliance page, since restaurants doing vendor diligence
+ask "are you compliant?" and there was nowhere to send them. Ayoub drafted the
+copy; it was already in the right hedged register ("we continuously review"),
+claiming no certification we don't hold, so it survived mostly intact.
+
+**The page asserts things that are not yet true in production.** It says guests
+are told they're speaking with an AI (true only once `ovioplus-platform` PR #21
+deploys) and that transcripts are deleted after 90 days (true only once PR #22
+merges *and* `RETENTION_ENABLED=true`, since #22 ships inert on purpose). A
+compliance page that overstates is worse than no compliance page, so **check
+both before this goes live**, and re-check whenever the retention numbers move.
+They appear in three places now: the platform's `retention.ts`, the privacy
+policy in `lib/i18n/legal.ts`, and this page's `specifics` list in
+`translations.ts`.
+
+Beyond the draft I added a "what that means in practice" section with checkable
+specifics plus direct links into Privacy, DPA and Cookies. Abstract trust
+language gets discounted by procurement reviewers; handing over the documents
+doesn't.
+
+Incidental fix: the root layout applies a `%s | OvioPlus` title template and all
+five legal pages set titles already ending in "| OvioPlus", so each rendered
+"Privacy Policy | OvioPlus | OvioPlus" in tabs and search results. Fixed.
+
+Left alone deliberately: `app/layout.tsx` defaults to "OvioPlus: AI Receptionist
+| Never Miss a Bookings". The grammar is wrong, but the homepage title is an SEO
+decision for Ayoub, not a silent fix.
+
+### 2026-09-22 — Legal docs rewritten to match the product (PR #3)
 
 A cold compliance-sales email (NORMQ) claimed to have "reviewed" the AI
 touchpoints and quoted the AI Act's €35M/7% tier at us. That tier is for
