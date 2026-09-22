@@ -11,3 +11,9 @@ dist
 .vercel
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# This repo is npm-managed (CI runs `npm ci`, package-lock.json is the lockfile).
+# A stray `pnpm install` writes these, and a second lockfile silently drifts from
+# the one CI actually uses. Keep them out.
+pnpm-lock.yaml
+pnpm-workspace.yaml
