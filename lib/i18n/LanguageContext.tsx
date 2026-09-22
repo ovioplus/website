@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { translations, type Lang, type Translations } from './translations';
+import { LANG_STORAGE_KEY as STORAGE_KEY } from './lang-boot';
 
 type LanguageContextValue = {
   lang: Lang;
@@ -11,7 +12,7 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-const STORAGE_KEY = 'ovioplus-lang';
+
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   // Default to 'it' for Italian audience, change to 'en' if you prefer
