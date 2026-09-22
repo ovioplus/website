@@ -70,6 +70,42 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-09-22 (latest) — html lang fix (#6), and a pnpm mess I made (#5)
+
+**This repo is npm-managed.** CI runs `npm ci`, `package-lock.json` is the
+lockfile. I ran pnpm here out of habit from `ovioplus-platform`, which *is* a
+pnpm repo, and committed `pnpm-lock.yaml` (137KB of a second, independently
+resolved dependency graph) plus a `pnpm-workspace.yaml` containing the literal
+placeholder `unrs-resolver: set this to true or false`. Both slipped through
+because CI never reads either. Removed and gitignored in #5. **Use npm in this
+repo.**
+
+**#6: `<html lang>` was wrong at parse time.** Symptom: page renders in English,
+Chrome offers to translate it *from Italian*. The root layout hardcodes
+`lang="it"` and `LanguageContext` only corrected it in a mount effect, but
+Chrome detects language during the initial parse, so it had already decided
+before the effect ran, and a later attribute change does not retract the prompt.
+Fixed with a blocking inline script at the top of `<body>` (`lib/i18n/lang-boot.ts`),
+the same trick dark-mode libraries use. The storage key lives in that one module
+and `LanguageContext` imports it, so the two cannot drift.
+
+**The real i18n problem is still open, and it is an SEO one.** The server renders
+Italian for *everyone* and the client swaps after hydration:
+
+```
+serverHtmlLang    "it"
+serverRenderedH1  "Un'AI costruita su trasparenza, sicurezza e responsabilità."
+clientRenderedH1  "AI built with transparency, security and responsibility."
+```
+
+So English visitors see a flash of Italian, and any crawler that does not run JS
+indexes Italian on every URL. One URL serves two languages, with no `hreflang`,
+so neither language has its own indexable address. **The marketing site's whole
+job is being found, and Google currently sees an Italian site.** The fix is
+locale-prefixed routes (`/en/...`, `/it/...`), which keeps pages static and gives
+each language a real URL. That is the next meaningful piece of work here, and it
+touches every route, link and the sitemap. Not a patch.
+
 ### 2026-09-22 (later) — /trust page, EN + IT (PR #4)
 
 A public AI Trust & Compliance page, since restaurants doing vendor diligence
