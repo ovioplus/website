@@ -21,7 +21,7 @@ const PRIVACY_IT: LegalDoc = {
   slug: 'privacy',
   title: 'Informativa Privacy',
   subtitle: 'Per i clienti finali: trattamento dei dati personali',
-  lastUpdated: '22 Settembre 2026',
+  lastUpdated: '10 Ottobre 2026',
   sections: [
     {
       id: 'data',
@@ -33,7 +33,7 @@ const PRIVACY_IT: LegalDoc = {
       id: 'titolare',
       heading: 'Titolare del trattamento',
       body:
-        "Il Titolare del trattamento è il ristorante presso cui è effettuata la prenotazione. OvioPlus opera quale Responsabile del trattamento ai sensi dell'art. 28 del GDPR e tratta i dati esclusivamente per conto del ristorante.",
+        "Il Titolare del trattamento è il ristorante presso cui è effettuata la prenotazione. OvioPlus opera quale Responsabile del trattamento ai sensi dell'art. 28 del GDPR e tratta i dati esclusivamente per conto del ristorante.\n\nOvioPlus è il nome commerciale di OVIO PLUS DI MOHAMED ALI MIHOUB, ditta individuale con sede in Via Giacomo Leopardi 11, Parma (PR), Italia, P.IVA IT03153990340, email contact@ovioplus.com.",
     },
     {
       id: 'finalita',
@@ -72,7 +72,7 @@ const PRIVACY_EN: LegalDoc = {
   slug: 'privacy',
   title: 'Privacy Policy',
   subtitle: 'For end customers: processing of personal data',
-  lastUpdated: 'September 22, 2026',
+  lastUpdated: 'October 10, 2026',
   sections: [
     {
       id: 'data',
@@ -84,7 +84,7 @@ const PRIVACY_EN: LegalDoc = {
       id: 'titolare',
       heading: 'Data controller',
       body:
-        'The Data Controller is the restaurant where the reservation is made. OvioPlus acts as Data Processor under Art. 28 of the GDPR and processes data exclusively on behalf of the restaurant.',
+        "The Data Controller is the restaurant where the reservation is made. OvioPlus acts as Data Processor under Art. 28 of the GDPR and processes data exclusively on behalf of the restaurant.\n\nOvioPlus is the trading name of OVIO PLUS DI MOHAMED ALI MIHOUB, a sole proprietorship (ditta individuale) with registered office at Via Giacomo Leopardi 11, Parma (PR), Italy, VAT number IT03153990340, email contact@ovioplus.com.",
     },
     {
       id: 'finalita',
@@ -123,9 +123,9 @@ const TERMS_IT: LegalDoc = {
   slug: 'terms',
   title: 'Termini e Condizioni',
   subtitle: 'Condizioni di utilizzo della piattaforma OvioPlus',
-  lastUpdated: '27 Giugno 2026',
+  lastUpdated: '10 Ottobre 2026',
   sections: [
-    { id: 'oggetto', heading: 'Art. 1: Oggetto', body: 'Le presenti Condizioni disciplinano l\'utilizzo della piattaforma software OvioPlus, accessibile tramite il dominio ovioplus.com, destinata alla gestione delle prenotazioni, delle chiamate e dei servizi correlati per ristoranti e attività di ristorazione.' },
+    { id: 'oggetto', heading: 'Art. 1: Oggetto', body: 'Le presenti Condizioni disciplinano l\'utilizzo della piattaforma software OvioPlus, accessibile tramite il dominio ovioplus.ai e l\'applicazione app.ovioplus.ai, destinata alla gestione delle prenotazioni, delle chiamate e dei servizi correlati per ristoranti e attività di ristorazione.' },
     { id: 'registrazione', heading: 'Art. 2: Registrazione', body: 'L\'accesso ai servizi è riservato agli utenti registrati. Il Cliente garantisce che tutte le informazioni fornite sono veritiere, aggiornate e complete.' },
     { id: 'licenza', heading: 'Art. 3: Licenza d\'uso', body: 'OvioPlus concede al Cliente una licenza personale, non esclusiva, non trasferibile e revocabile per l\'utilizzo della piattaforma durante la validità del contratto.' },
     { id: 'uso', heading: 'Art. 4: Utilizzo corretto', body: 'Il Cliente si impegna a utilizzare il servizio nel rispetto delle normative vigenti e a non utilizzare la piattaforma per finalità illecite, fraudolente o che possano compromettere il funzionamento del servizio.' },
@@ -142,9 +142,9 @@ const TERMS_EN: LegalDoc = {
   slug: 'terms',
   title: 'Terms & Conditions',
   subtitle: 'Terms of use of the OvioPlus platform',
-  lastUpdated: 'June 27, 2026',
+  lastUpdated: 'October 10, 2026',
   sections: [
-    { id: 'oggetto', heading: 'Art. 1: Subject', body: 'These Terms govern the use of the OvioPlus software platform, accessible at ovioplus.com, intended for managing reservations, calls, and related services for restaurants and dining establishments.' },
+    { id: 'oggetto', heading: 'Art. 1: Subject', body: 'These Terms govern the use of the OvioPlus software platform, accessible at ovioplus.ai and the application at app.ovioplus.ai, intended for managing reservations, calls, and related services for restaurants and dining establishments.' },
     { id: 'registrazione', heading: 'Art. 2: Registration', body: 'Access to the services is reserved for registered users. The Customer warrants that all information provided is truthful, current, and complete.' },
     { id: 'licenza', heading: 'Art. 3: License of use', body: 'OvioPlus grants the Customer a personal, non-exclusive, non-transferable, and revocable license to use the platform for the duration of the contract.' },
     { id: 'uso', heading: 'Art. 4: Acceptable use', body: 'The Customer agrees to use the service in compliance with applicable regulations and not to use the platform for unlawful, fraudulent purposes or in ways that could compromise the service.' },
@@ -161,7 +161,7 @@ const COOKIES_IT: LegalDoc = {
   slug: 'cookies',
   title: 'Cookie Policy',
   subtitle: 'Come utilizziamo i cookie su ovioplus.com',
-  lastUpdated: '27 Giugno 2026',
+  lastUpdated: '10 Ottobre 2026',
   sections: [
     { id: 'cosa', heading: 'Cosa sono i cookie', body: 'I cookie sono piccoli file di testo che vengono memorizzati sul dispositivo dell\'utente (computer, smartphone o tablet) durante la navigazione di un sito web. I cookie consentono al sito di funzionare correttamente, migliorare l\'esperienza dell\'utente, ricordare preferenze e raccogliere informazioni statistiche anonime sull\'utilizzo del sito.' },
     { id: 'tecnici', heading: 'Cookie tecnici', body: 'Sono indispensabili per il corretto funzionamento del sito. Questi cookie non richiedono il consenso dell\'utente.' },
@@ -170,7 +170,7 @@ const COOKIES_IT: LegalDoc = {
     { id: 'marketing', heading: 'Cookie di marketing', body: 'Previo consenso dell\'utente, possono essere utilizzati cookie di terze parti per:\n\n• personalizzare gli annunci pubblicitari\n• effettuare attività di remarketing\n• misurare l\'efficacia delle campagne pubblicitarie\n\nQuesti cookie possono essere installati da piattaforme come Google, Meta (Facebook e Instagram), TikTok o altri partner pubblicitari.' },
     { id: 'social', heading: 'Cookie dei social network', body: 'Il sito può integrare pulsanti o contenuti provenienti da social network che consentono all\'utente di condividere contenuti o interagire direttamente con le piattaforme social. L\'utilizzo di tali servizi può comportare l\'installazione di cookie da parte dei rispettivi fornitori.' },
     { id: 'gestione', heading: 'Gestione dei cookie', body: 'L\'utente può modificare in qualsiasi momento le proprie preferenze attraverso il banner dei cookie presente sul sito oppure tramite le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito.' },
-    { id: 'titolare', heading: 'Titolare del trattamento', body: 'OvioPlus, Email: contact@ovioplus.com' },
+    { id: 'titolare', heading: 'Titolare del trattamento', body: "OvioPlus è il nome commerciale di OVIO PLUS DI MOHAMED ALI MIHOUB, ditta individuale con sede in Via Giacomo Leopardi 11, Parma (PR), Italia, P.IVA IT03153990340, email contact@ovioplus.com." },
     { id: 'aggiornamenti', heading: 'Aggiornamenti', body: 'La presente Cookie Policy potrà essere modificata in qualsiasi momento per adeguarsi a eventuali aggiornamenti normativi.' },
   ],
 };
@@ -179,7 +179,7 @@ const COOKIES_EN: LegalDoc = {
   slug: 'cookies',
   title: 'Cookie Policy',
   subtitle: 'How we use cookies on ovioplus.com',
-  lastUpdated: 'June 27, 2026',
+  lastUpdated: 'October 10, 2026',
   sections: [
     { id: 'cosa', heading: 'What cookies are', body: 'Cookies are small text files stored on the user\'s device (computer, smartphone, or tablet) while browsing a website. Cookies enable the site to function properly, improve user experience, remember preferences, and collect anonymous statistical information about site usage.' },
     { id: 'tecnici', heading: 'Technical cookies', body: 'Essential for the proper functioning of the site. These cookies do not require user consent.' },
@@ -188,7 +188,7 @@ const COOKIES_EN: LegalDoc = {
     { id: 'marketing', heading: 'Marketing cookies', body: 'With user consent, third-party cookies may be used to:\n\n• personalize advertising\n• carry out remarketing activities\n• measure advertising campaign effectiveness\n\nThese cookies may be installed by platforms like Google, Meta (Facebook and Instagram), TikTok, or other advertising partners.' },
     { id: 'social', heading: 'Social network cookies', body: 'The site may integrate buttons or content from social networks that allow users to share content or interact directly with social platforms. Use of these services may result in the installation of cookies by their respective providers.' },
     { id: 'gestione', heading: 'Managing cookies', body: 'You can modify your preferences at any time through the cookie banner on the site or through your browser settings. Disabling technical cookies may impair the proper functioning of the site.' },
-    { id: 'titolare', heading: 'Data controller', body: 'OvioPlus, Email: contact@ovioplus.com' },
+    { id: 'titolare', heading: 'Data controller', body: "OvioPlus is the trading name of OVIO PLUS DI MOHAMED ALI MIHOUB, a sole proprietorship (ditta individuale) with registered office at Via Giacomo Leopardi 11, Parma (PR), Italy, VAT number IT03153990340, email contact@ovioplus.com." },
     { id: 'aggiornamenti', heading: 'Updates', body: 'This Cookie Policy may be modified at any time to adapt to regulatory updates.' },
   ],
 };
@@ -197,9 +197,9 @@ const DPA_IT: LegalDoc = {
   slug: 'dpa',
   title: 'Accordo sul Trattamento dei Dati (DPA)',
   subtitle: 'Ai sensi dell\'art. 28 del Regolamento (UE) 2016/679 (GDPR)',
-  lastUpdated: '22 Settembre 2026',
+  lastUpdated: '10 Ottobre 2026',
   sections: [
-    { id: 'parti', heading: 'Parti', body: 'Il presente Accordo disciplina il trattamento dei dati personali effettuato da OvioPlus quale Responsabile del trattamento per conto del Cliente, Titolare del trattamento, ai sensi dell\'art. 28 del Regolamento (UE) 2016/679 (GDPR).' },
+    { id: 'parti', heading: 'Parti', body: "Il presente Accordo disciplina il trattamento dei dati personali effettuato da OvioPlus quale Responsabile del trattamento per conto del Cliente, Titolare del trattamento, ai sensi dell'art. 28 del Regolamento (UE) 2016/679 (GDPR).\n\nOvioPlus è il nome commerciale di OVIO PLUS DI MOHAMED ALI MIHOUB, ditta individuale con sede in Via Giacomo Leopardi 11, Parma (PR), Italia, P.IVA IT03153990340, PEC/email contact@ovioplus.com." },
     { id: 'oggetto', heading: 'Oggetto', body: 'OvioPlus tratta i dati esclusivamente per fornire il servizio di gestione delle prenotazioni e delle comunicazioni con i clienti del ristorante.' },
     { id: 'categorie', heading: 'Categorie di dati', body: '• Nome e cognome\n• Numero di telefono\n• Indirizzo email (se raccolto)\n• Data e ora della prenotazione\n• Numero di coperti\n• Eventuali note relative alla prenotazione\n• Informazioni su allergie, intolleranze o esigenze alimentari, se comunicate dal cliente: si tratta di dati relativi alla salute ai sensi dell\'art. 9 GDPR, trattati sulla base del consenso esplicito dell\'interessato e per la sola finalità di consentire una preparazione sicura del pasto\n• Trascrizioni delle conversazioni con l\'assistente AI' },
     { id: 'finalita', heading: 'Finalità', body: 'I dati sono trattati esclusivamente per:\n\n• gestione delle prenotazioni\n• assistenza tecnica\n• manutenzione della piattaforma\n• sicurezza del servizio\n\nOvioPlus non utilizza tali dati per finalità di marketing proprie, salvo consenso espresso o diversa base giuridica.' },
@@ -214,9 +214,9 @@ const DPA_EN: LegalDoc = {
   slug: 'dpa',
   title: 'Data Processing Agreement (DPA)',
   subtitle: 'Pursuant to Art. 28 of Regulation (EU) 2016/679 (GDPR)',
-  lastUpdated: 'September 22, 2026',
+  lastUpdated: 'October 10, 2026',
   sections: [
-    { id: 'parti', heading: 'Parties', body: 'This Agreement governs the processing of personal data carried out by OvioPlus as Data Processor on behalf of the Customer, Data Controller, pursuant to Art. 28 of Regulation (EU) 2016/679 (GDPR).' },
+    { id: 'parti', heading: 'Parties', body: "This Agreement governs the processing of personal data carried out by OvioPlus as Data Processor on behalf of the Customer, Data Controller, pursuant to Art. 28 of Regulation (EU) 2016/679 (GDPR).\n\nOvioPlus is the trading name of OVIO PLUS DI MOHAMED ALI MIHOUB, a sole proprietorship (ditta individuale) with registered office at Via Giacomo Leopardi 11, Parma (PR), Italy, VAT number IT03153990340, email contact@ovioplus.com." },
     { id: 'oggetto', heading: 'Subject', body: 'OvioPlus processes data exclusively to provide the reservation management service and communications with restaurant customers.' },
     { id: 'categorie', heading: 'Data categories', body: '• First and last name\n• Phone number\n• Email address (if collected)\n• Reservation date and time\n• Number of covers\n• Any notes related to the reservation\n• Allergy, intolerance or dietary information where the guest provides it: this is health data under Art. 9 GDPR, processed on the basis of the data subject\u2019s explicit consent and for the sole purpose of allowing the meal to be prepared safely\n• Transcripts of conversations with the AI assistant' },
     { id: 'finalita', heading: 'Purposes', body: 'Data is processed exclusively for:\n\n• reservation management\n• technical support\n• platform maintenance\n• service security\n\nOvioPlus does not use this data for its own marketing purposes, except with express consent or under a different legal basis.' },
