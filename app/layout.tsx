@@ -135,11 +135,6 @@ const jsonLd = {
         lowPrice: '99',
         highPrice: '499',
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '12',
-      },
     },
     {
       '@type': 'WebSite',
