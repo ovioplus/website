@@ -70,6 +70,35 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-10-10 — Entity named in the legal docs (#8); fabricated rating removed (#9)
+
+**#8:** the docs identified the controller as "OvioPlus" and nothing more. A
+DPA that doesn't name the processor is where a customer's lawyer stops, and a
+privacy notice without the controller's identity fails Art. 13(1)(a). The
+partita IVA certificate finally supplied it: **OVIO PLUS DI MOHAMED ALI
+MIHOUB**, ditta individuale, Via Giacomo Leopardi 11, Parma (PR), P.IVA
+IT03153990340. Added to privacy, cookies and the DPA in both languages.
+Business identity only — the holder's codice fiscale is personal data and
+belongs on invoices, not a public page. Terms also stopped calling
+`ovioplus.com` the platform; it's the email domain, the app is
+`app.ovioplus.ai`.
+
+**#9, the one to remember:** `app/layout.tsx` had been publishing
+`aggregateRating: 4.9 from 12 ratings` in schema.org markup on every page.
+There are **no customers at all** — Stripe shows zero live subscriptions and
+zero invoices. Fabricated consumer reviews are a blacklisted practice under
+Annex I of Directive 2005/29/EC as amended by the Omnibus Directive, enforced
+in Italy by AGCM, and Google separately penalises fake aggregate ratings with a
+manual action. Being machine-readable made it the easiest possible claim to
+evidence. Removed, not adjusted: there is no honest number yet.
+
+**Still open and needs Ayoub, not code:** `components/sections/Clients.tsx`
+names seven restaurants under "Trusted by restaurants" (Trattoria San Marco,
+Osteria del Borgo, and five more). If those are placeholders they are the same
+legal problem and must go before signups open. If any are real unpaid pilots,
+their permission is needed to name them. Same question for the testimonials
+section.
+
 ### 2026-09-22 — Back-to-top button didn't work on phones (#7)
 
 Three mobile-only defects in one small component, worth remembering because
