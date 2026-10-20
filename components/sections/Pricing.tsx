@@ -8,6 +8,10 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { cn } from '@/lib/utils';
 
 const featuredIndex = 1;
+// Order matches t.pricing.plans and the app's paid plan ids. The app reads
+// ?plan= on sign-up and sends the owner to Stripe Checkout for exactly this
+// plan; without it they land on the free tier.
+const PLAN_IDS = ['starter', 'pro', 'scale'] as const;
 
 /** A feature line with an optional info tooltip: hover or focus to reveal. */
 function FeatureNote({ note }: { note: string }) {
@@ -209,7 +213,7 @@ export function Pricing() {
                   </ul>
 
                   <a
-                    href="https://app.ovioplus.ai/sign-up"
+                    href={`https://app.ovioplus.ai/sign-up?plan=${PLAN_IDS[i] ?? 'starter'}&interval=${yearly ? 'year' : 'month'}`}
                     onClick={(e) => e.stopPropagation()}
                     className={cn(
                       'cta-glow block text-center py-3.5 rounded-xl font-semibold transition-colors',

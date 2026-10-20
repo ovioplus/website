@@ -70,6 +70,14 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-10-20 (later) — Pricing buttons pass the chosen plan to the app
+
+Pricing CTAs now link to `app.ovioplus.ai/sign-up?plan=<starter|pro|scale>&interval=<month|year>`
+(interval follows the monthly/yearly toggle). The app (ovioplus-platform PLAN
+§18) carries that through sign-up to Stripe Checkout; with no plan, owners land
+on the app's new free tier, which is deliberately not shown on this site. The
+`PLAN_IDS` order in `Pricing.tsx` must match `t.pricing.plans`.
+
 ### 2026-10-20 — Pricing cards selectable, card hover effects, no more double blue blocks
 
 Ayoub reported three things. **Pricing:** only the middle card looked chosen and
