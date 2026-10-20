@@ -49,6 +49,10 @@ function FeatureNote({ note }: { note: string }) {
 export function Pricing() {
   const { t } = useLanguage();
   const [yearly, setYearly] = useState(false);
+  // Which card is highlighted. Starts on the featured plan; any card can be
+  // picked by clicking it, and the highlight follows the choice. Before, the
+  // middle card was styled as chosen and the others did nothing at all.
+  const [selected, setSelected] = useState(featuredIndex);
 
   return (
     <section id="pricing" className="relative py-16 md:py-20">
@@ -106,9 +110,10 @@ export function Pricing() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto items-stretch">
+        <div role="radiogroup" aria-label={t.pricing.eyebrow} className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto items-stretch">
           {t.pricing.plans.map((plan, i) => {
             const featured = i === featuredIndex;
+            const active = i === selected;
             return (
               <motion.div
                 key={plan.name}
@@ -116,17 +121,24 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={cn(
-                  'relative flex',
-                  featured && 'md:-my-4 md:z-10',
-                )}
+                className={cn('relative flex', active && 'md:z-10')}
               >
                 <div
+                  role="radio"
+                  aria-checked={active}
+                  tabIndex={0}
+                  onClick={() => setSelected(i)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelected(i);
+                    }
+                  }}
                   className={cn(
-                    'relative rounded-3xl p-8 flex flex-col w-full',
-                    featured
-                      ? 'bg-white border-2 border-brand-cyan shadow-2xl shadow-brand-cyan/20'
-                      : 'bg-white/85 border border-white/80 shadow-lg shadow-slate-900/5',
+                    'lift-card relative rounded-3xl p-8 flex flex-col w-full cursor-pointer outline-none focus-visible:ring-4 focus-visible:ring-brand-cyan/30',
+                    active
+                      ? 'bg-white border-2 border-brand-cyan shadow-2xl shadow-brand-cyan/20 md:scale-[1.03]'
+                      : 'bg-white/85 border-2 border-white/80 shadow-lg shadow-slate-900/5',
                   )}
                 >
                   {featured && (
@@ -138,10 +150,21 @@ export function Pricing() {
                     </div>
                   )}
 
+                  {active && (
+                    <motion.span
+                      layoutId="pricing-check"
+                      className="absolute top-5 right-5 grid h-7 w-7 place-items-center rounded-full bg-brand-cyan text-white shadow-md"
+                      transition={{ type: 'spring', stiffness: 420, damping: 30 }}
+                      aria-hidden
+                    >
+                      <Check className="w-4 h-4" />
+                    </motion.span>
+                  )}
+
                   <div className="mb-6">
                     <h3 className={cn(
-                      'font-display text-3xl font-semibold mb-1',
-                      featured ? 'text-text-primary' : 'text-text-secondary',
+                      'font-display text-3xl font-semibold mb-1 transition-colors',
+                      active ? 'text-text-primary' : 'text-text-secondary',
                     )}>
                       {plan.name}
                     </h3>
@@ -152,8 +175,9 @@ export function Pricing() {
                     <div className="flex items-baseline gap-1">
                       <span
                         className={cn(
-                          'font-display font-semibold leading-none',
-                          featured ? 'text-7xl text-text-primary' : 'text-6xl text-text-secondary',
+                          'font-display font-semibold leading-none transition-colors',
+                          featured ? 'text-7xl' : 'text-6xl',
+                          active ? 'text-text-primary' : 'text-text-secondary',
                         )}
                       >
                         {yearly ? plan.priceYearly : plan.price}
@@ -173,10 +197,10 @@ export function Pricing() {
                     {plan.features.map((f) => (
                       <li key={f.text} className="flex items-start gap-2.5 text-sm">
                         <Check className={cn(
-                          'w-4 h-4 mt-0.5 flex-shrink-0',
-                          featured ? 'text-brand-cyan' : 'text-text-muted',
+                          'w-4 h-4 mt-0.5 flex-shrink-0 transition-colors',
+                          active ? 'text-brand-cyan' : 'text-text-muted',
                         )} />
-                        <span className={cn('flex items-center gap-1.5', featured ? 'text-text-secondary' : 'text-text-muted')}>
+                        <span className={cn('flex items-center gap-1.5', active ? 'text-text-secondary' : 'text-text-muted')}>
                           {f.text}
                           {f.note && <FeatureNote note={f.note} />}
                         </span>
@@ -186,11 +210,12 @@ export function Pricing() {
 
                   <a
                     href="https://app.ovioplus.ai/sign-up"
+                    onClick={(e) => e.stopPropagation()}
                     className={cn(
-                      'block text-center py-3.5 rounded-xl font-semibold transition-colors',
-                      featured
+                      'cta-glow block text-center py-3.5 rounded-xl font-semibold transition-colors',
+                      active
                         ? 'bg-brand-cyan text-white hover:bg-brand-cyan-light'
-                        : 'bg-transparent text-text-primary border border-line-strong hover:border-brand-cyan/40',
+                        : 'bg-transparent text-text-primary border border-line-strong hover:border-brand-cyan/40 hover:text-brand-cyan-dark',
                     )}
                   >
                     {t.pricing.cta}

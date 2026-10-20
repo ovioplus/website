@@ -38,7 +38,7 @@ export default function ContactPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="group rounded-3xl bg-white border border-line p-8 shadow-sm shadow-slate-900/5 hover:border-brand-cyan/40 hover:shadow-lg hover:shadow-brand-cyan/10 transition-all flex flex-col"
+                  className="lift-card group rounded-3xl bg-white border border-line p-8 shadow-sm shadow-slate-900/5 flex flex-col"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-brand-cyan/10 flex items-center justify-center mb-6">
                     <Icon className="w-5 h-5 text-brand-cyan" />

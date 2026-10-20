@@ -70,7 +70,7 @@ export default function SitemapPage() {
                       <a
                         key={link.href}
                         href={link.href}
-                        className="group flex items-start gap-4 rounded-2xl bg-white border border-line p-5 shadow-sm shadow-slate-900/5 hover:border-brand-cyan/40 hover:shadow-md transition-all"
+                        className="lift-card group flex items-start gap-4 rounded-2xl bg-white border border-line p-5 shadow-sm shadow-slate-900/5"
                       >
                         <div className="w-10 h-10 rounded-xl bg-brand-cyan/10 flex items-center justify-center flex-shrink-0">
                           <Icon className="w-4 h-4 text-brand-cyan" />
