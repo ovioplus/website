@@ -70,6 +70,35 @@ chmod +x .git/hooks/pre-push
 
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
+### 2026-10-20 — Pricing cards selectable, card hover effects, no more double blue blocks
+
+Ayoub reported three things. **Pricing:** only the middle card looked chosen and
+the cards did nothing on click or hover. Cards are now a radio group: click (or
+Enter/Space) any card and the highlight, check badge and filled CTA follow it.
+**Hover:** a shared `.lift-card` (lift + cyan glow, the back-to-top button's
+feel) on cards across home, About, Trust, Partnerships, Contact and Sitemap, and
+`.cta-glow` / `.btn-primary` / `.btn-ghost` got the same glow. **The gotcha
+worth remembering:** `.lift-card` uses the CSS `translate` and `scale`
+properties, not `transform`, because framer-motion's scroll-in animations write
+`transform` inline and an inline style beats any class, so a transform-based
+hover silently never shows on those cards. All hover effects are gated on
+`(hover: hover) and (pointer: fine)`, same lesson as the back-to-top button.
+
+**Double blue blocks:** About (vision) and Trust (commitment, which I added in
+#4) ended with the same solid cyan gradient as the footer's newsletter banner,
+so those pages closed on two identical blue slabs. Both now use a light
+`components/ui/ClosingStatement.tsx`. One blue accent per screen.
+
+Also in this PR: on every standalone page (`PageShell`) the "Back to home" link
+and the page eyebrow were both inline elements, so they shared one line and the
+link's `mb-8` did nothing; "BACK TO HOMEABOUT" in the DOM text gave it away.
+Link is now a block-level pill on its own row, eyebrow is `block`.
+
+Not verified by eye: the browser pane was hidden, so screenshots came back
+black. Checked through the DOM instead (selection state flips, closing block is
+white, newsletter still gradient) plus typecheck, lint and build. Worth one look
+on a real desktop and phone.
+
 ### 2026-10-10 — Entity named in the legal docs (#8); fabricated rating removed (#9)
 
 **#8:** the docs identified the controller as "OvioPlus" and nothing more. A

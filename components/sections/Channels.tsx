@@ -42,7 +42,7 @@ export function Channels() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-3 relative overflow-hidden rounded-3xl border border-white/80 bg-white/85 p-10 md:p-12 min-h-[420px] flex flex-col justify-between hover:border-brand-cyan/40 transition-colors shadow-lg shadow-slate-900/5"
+            className="lift-card lg:col-span-3 relative overflow-hidden rounded-3xl border border-white/80 bg-white/85 p-10 md:p-12 min-h-[420px] flex flex-col justify-between shadow-lg shadow-slate-900/5"
           >
             <div>
               <div className={`inline-flex p-3.5 rounded-2xl ${feature.bg} text-white mb-8`}>
@@ -72,7 +72,7 @@ export function Channels() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                  className="relative overflow-hidden rounded-3xl border border-white/80 bg-white/75 p-8 hover:border-brand-cyan/40 transition-colors shadow-lg shadow-slate-900/5"
+                  className="lift-card relative overflow-hidden rounded-3xl border border-white/80 bg-white/75 p-8 shadow-lg shadow-slate-900/5"
                 >
                   <div className="flex items-start gap-5">
                     <div className={`inline-flex p-2.5 rounded-xl ${channel.bg} text-white flex-shrink-0`}>

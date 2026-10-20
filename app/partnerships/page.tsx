@@ -77,7 +77,7 @@ export default function PartnershipsPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-50px' }}
                       transition={{ duration: 0.5, delay: i * 0.06 }}
-                      className="rounded-2xl bg-white border border-line p-6 shadow-sm shadow-slate-900/5 hover:border-brand-cyan/40 hover:shadow-md transition-all"
+                      className="lift-card rounded-2xl bg-white border border-line p-6 shadow-sm shadow-slate-900/5"
                     >
                       <div className="w-10 h-10 rounded-xl bg-brand-cyan/10 flex items-center justify-center mb-4">
                         <Icon className="w-4 h-4 text-brand-cyan" />

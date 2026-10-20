@@ -31,15 +31,18 @@ export function PageShell({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+          {/* Both used to be inline elements, so they shared one line and the
+              mb-8 on the link did nothing: "BACK TO HOME" ran straight into
+              the page name. Each gets its own row now. */}
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-muted hover:text-brand-cyan transition-colors mb-8"
+            className="group flex w-fit items-center gap-1.5 rounded-full border border-line bg-white/70 px-3 py-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-muted transition-colors hover:border-brand-cyan/40 hover:text-brand-cyan mb-10"
           >
-            <ArrowLeft className="w-3 h-3" />
+            <ArrowLeft className="w-3 h-3 transition-transform group-hover:-translate-x-0.5" />
             {t.pages.backHome}
           </Link>
 
-          <span className="inline-block font-mono text-xs uppercase tracking-[0.18em] text-brand-cyan mb-4">
+          <span className="block font-mono text-xs uppercase tracking-[0.18em] text-brand-cyan mb-4">
             {eyebrow}
           </span>
 
