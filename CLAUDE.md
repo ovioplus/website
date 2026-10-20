@@ -89,6 +89,11 @@ hover silently never shows on those cards. All hover effects are gated on
 so those pages closed on two identical blue slabs. Both now use a light
 `components/ui/ClosingStatement.tsx`. One blue accent per screen.
 
+Also in this PR: on every standalone page (`PageShell`) the "Back to home" link
+and the page eyebrow were both inline elements, so they shared one line and the
+link's `mb-8` did nothing; "BACK TO HOMEABOUT" in the DOM text gave it away.
+Link is now a block-level pill on its own row, eyebrow is `block`.
+
 Not verified by eye: the browser pane was hidden, so screenshots came back
 black. Checked through the DOM instead (selection state flips, closing block is
 white, newsletter still gradient) plus typecheck, lint and build. Worth one look
