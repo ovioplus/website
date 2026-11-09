@@ -25,6 +25,7 @@ export function Navbar() {
   // Nav links respect FEATURES toggles; hidden sections are also hidden from nav
   const navLinks = [
     { label: t.nav.features, href: '/#features', show: true },
+    { label: t.nav.platform, href: '/#platform', show: true },
     { label: t.nav.how, href: '/#how', show: true },
     { label: t.nav.pricing, href: '/#pricing', show: FEATURES.showPricing },
     { label: t.nav.faq, href: '/#faq', show: true },
@@ -40,7 +41,7 @@ export function Navbar() {
       >
         <nav
           className={cn(
-            'mx-auto max-w-5xl flex items-center justify-between h-14 md:h-16 px-5 md:px-6 rounded-full transition-all duration-300',
+            'mx-auto max-w-6xl flex items-center justify-between h-14 md:h-16 px-5 md:px-6 rounded-full transition-all duration-300',
             scrolled
               ? 'bg-white/80 border border-line shadow-lg shadow-slate-900/5'
               : 'bg-white/60 border border-white/80 shadow-md shadow-slate-900/5',
@@ -51,12 +52,12 @@ export function Navbar() {
             <Logo variant="icon" size={36} />
           </Link>
 
-          <ul className="hidden md:flex items-center gap-1">
+          <ul className="hidden lg:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="px-3.5 py-1.5 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-full"
+                  className="whitespace-nowrap px-3 py-1.5 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-full"
                 >
                   {link.label}
                 </a>
@@ -64,7 +65,7 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <LanguageToggle />
             <a
               href="https://app.ovioplus.ai/sign-in"
@@ -72,7 +73,7 @@ export function Navbar() {
             >
               {t.nav.signIn}
             </a>
-            <Link href="/#contact" className="btn-primary text-sm py-2 px-4 group">
+            <Link href="/#contact" className="btn-primary whitespace-nowrap text-sm py-2 px-4 group">
               {t.nav.bookDemo}
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
@@ -80,7 +81,7 @@ export function Navbar() {
 
           <button
             onClick={() => setMobileOpen(true)}
-            className="md:hidden p-2 rounded-full text-text-primary hover:bg-slate-100"
+            className="lg:hidden p-2 rounded-full text-text-primary hover:bg-slate-100"
             aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
@@ -94,7 +95,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] md:hidden bg-brand-sky-light"
+            className="fixed inset-0 z-[60] lg:hidden bg-brand-sky-light"
             style={{ backdropFilter: 'blur(20px)' }}
           >
             <div className="container-page flex h-20 items-center justify-between">

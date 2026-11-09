@@ -231,7 +231,14 @@ export function Pricing() {
         </div>
 
         <Reveal delay={0.2}>
-          <p className="mt-16 text-center text-sm text-text-muted">{t.pricing.footer}</p>
+          <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center justify-between gap-4 rounded-2xl border border-brand-cyan/25 bg-white/70 px-6 py-5 text-center sm:flex-row sm:text-left">
+            <p className="text-sm text-text-secondary">{t.pricing.trialLine}</p>
+            {/* No ?plan=: a plain sign-up starts the free trial instead of Checkout. */}
+            <a href="https://app.ovioplus.ai/sign-up" className="btn-ghost shrink-0 whitespace-nowrap text-sm">
+              {t.pricing.trialCta} →
+            </a>
+          </div>
+          <p className="mt-8 text-center text-sm text-text-muted">{t.pricing.footer}</p>
         </Reveal>
       </div>
     </section>

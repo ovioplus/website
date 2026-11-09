@@ -4,7 +4,9 @@ import { StatStrip } from '@/components/sections/StatStrip';
 import { Channels } from '@/components/sections/Channels';
 import { PhoneShowcase } from '@/components/sections/PhoneShowcase';
 import { HowItWorks } from '@/components/sections/HowItWorks';
-import { Dashboard } from '@/components/sections/Dashboard';
+import { Problem } from '@/components/sections/Problem';
+import { Platform } from '@/components/sections/Platform';
+import { Advantages } from '@/components/sections/Advantages';
 import { Clients } from '@/components/sections/Clients';
 import { Pricing } from '@/components/sections/Pricing';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -20,11 +22,13 @@ export default function HomePage() {
       <main>
         <Hero />
         <StatStrip />
+        <Problem />
         {FEATURES.showClients && <Clients />}
         <Channels />
+        <Platform />
         <PhoneShowcase />
         <HowItWorks />
-        <Dashboard />
+        <Advantages />
         {FEATURES.showTestimonials && <Testimonials />}
         {FEATURES.showPricing && <Pricing />}
         <FAQ />
