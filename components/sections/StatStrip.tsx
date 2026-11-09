@@ -1,12 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock, Zap, Phone, Globe } from 'lucide-react';
+import { Clock, Gift, Globe, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export function StatStrip() {
   const { lang } = useLanguage();
 
+  // Only claims we can stand behind today. "+30% calls recovered" and
+  // "<800ms" were here with no customer data or measurement behind them.
   const stats = [
     {
       icon: Clock,
@@ -14,14 +16,14 @@ export function StatStrip() {
       label: lang === 'it' ? 'Sempre attivo' : 'Always on',
     },
     {
-      icon: Zap,
-      value: '<800ms',
-      label: lang === 'it' ? 'Risposta in tempo reale' : 'Real-time response',
+      icon: Gift,
+      value: lang === 'it' ? '14 giorni' : '14 days',
+      label: lang === 'it' ? 'Prova gratuita, senza carta' : 'Free trial, no card',
     },
     {
-      icon: Phone,
-      value: '+30%',
-      label: lang === 'it' ? 'Chiamate recuperate' : 'Calls recovered',
+      icon: ShieldCheck,
+      value: '0',
+      label: lang === 'it' ? 'Doppie prenotazioni' : 'Double bookings',
     },
     {
       icon: Globe,
@@ -54,7 +56,7 @@ export function StatStrip() {
                   <div className="font-display text-xl font-semibold text-text-primary leading-tight tabular-nums">
                     {stat.value}
                   </div>
-                  <div className="text-[11px] text-text-muted leading-tight mt-0.5 truncate">
+                  <div className="text-[11px] text-text-muted leading-tight mt-0.5">
                     {stat.label}
                   </div>
                 </div>

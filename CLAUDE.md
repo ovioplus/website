@@ -68,6 +68,39 @@ chmod +x .git/hooks/pre-push
 
 ## Session Log
 
+### 2026-11-09: Homepage rebuilt around the product, after fixia.it; false claims removed
+
+Ayoub asked for the site to reflect what the app now does, "something like
+fixia.it". Took fixia's structure, not its look: a dark **problem** band (three
+pain cards), then **"La piattaforma in azione"**: five rows, each a product
+screen in a browser frame with a stat card floating over a corner (Servizio map,
+change table + Modifica, calendar with covers, Chiedi a Ovio, guest booking page),
+then numbered **advantages**. The old six-card "owner dashboard" grid is gone.
+
+The screens are **coded mockups** in `components/platform/mocks.tsx`, not
+screenshots: sharp at any size, translated by the IT/EN toggle, and no real
+guest data. They mirror app.ovioplus.ai as of platform PR #40; if a screen
+changes there, change it here. Rule kept in `Platform.tsx`: only shipped
+features get a row.
+
+**Removed because they were not true:** "Daily summary email" (never built),
+Scale's "Custom IVR menu" and "Multi-channel routing rules" (do not exist), the
+FAQ promise that callers can reach a human via an IVR or fall back after a
+timeout, "Export all your data with one click", and the stat strip's "+30%
+calls recovered" and "<800ms" (no data behind either, the same problem as the
+fabricated rating in #9). Replaced with the 14-day trial, "0 double bookings"
+(the exclusion constraint makes that a guarantee) and real FAQ answers.
+
+**Free trial is now on the site.** Hero CTA "Provalo gratis per 14 giorni" and
+a line under pricing go to `app.ovioplus.ai/sign-up` with **no** `?plan=`, which
+starts the trial (platform PLAN §18); plan cards still go to Checkout. The
+earlier "free tier deliberately not shown" note is superseded: the free tier
+became a 14-day trial for everyone.
+
+Navbar gained "Piattaforma" and now collapses to the menu below `lg` (it
+wrapped in Italian at tablet width). Pre-existing and untouched: the dev-only
+hydration warning on `<html lang>` from the lang-boot script (#6).
+
 <!-- Newest entry first. One entry per session that changed non-trivial state or made a decision worth remembering. Keep entries short. -->
 
 ### 2026-10-20 (later) — Pricing buttons pass the chosen plan to the app

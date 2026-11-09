@@ -57,15 +57,24 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
-          <a href="#contact" className="btn-primary group">
+          {/* No ?plan=: a plain sign-up lands on the 14-day free trial (platform PLAN §18). */}
+          <a href="https://app.ovioplus.ai/sign-up" className="btn-primary group">
             {t.hero.cta1}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
-          <a href="#how" className="btn-ghost">
+          <a href="#contact" className="btn-ghost">
             <PlayCircle className="w-4 h-4" />
             {t.hero.cta2}
           </a>
         </motion.div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-3 text-center text-xs text-text-muted"
+        >
+          {t.hero.trialNote}
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
