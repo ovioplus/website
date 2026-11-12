@@ -94,6 +94,12 @@ export const translations = {
         },
       ],
     },
+    video: {
+      eyebrow: 'In 40 seconds',
+      title1: 'A Saturday night,',
+      titleHighlight: 'before and after OvioPlus.',
+      ariaLabel: 'OvioPlus video: a busy Saturday night, missed calls, then the AI answering and the live floor plan.',
+    },
     platform: {
       eyebrow: 'The platform in action',
       title1: 'One screen for the whole service.',
@@ -588,6 +594,12 @@ export const translations = {
           body: 'Chi arriva e quando, a quale tavolo, con quale allergia? Senza un unico schermo, la sala si gestisce a memoria.',
         },
       ],
+    },
+    video: {
+      eyebrow: 'In 40 secondi',
+      title1: 'Un sabato sera,',
+      titleHighlight: 'prima e dopo OvioPlus.',
+      ariaLabel: 'Video OvioPlus: un sabato sera pieno, chiamate perse, poi l’AI che risponde e la sala in tempo reale.',
     },
     platform: {
       eyebrow: 'La piattaforma in azione',
