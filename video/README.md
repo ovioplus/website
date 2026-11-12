@@ -16,8 +16,13 @@ build; it has its own `package.json` so the site's dependencies stay untouched.
 cd video && npm install
 node stills.mjs it 5 16.5 27.5 41
 node render.mjs it && node render.mjs en
-cp out/ovioplus-sabato-sera-*.mp4 ../public/videos/
 ```
+
+**Do not copy the render straight over `public/videos/`.** The published files
+have a sound track Ayoub added after rendering (commit `ff6d145`); the render
+here is silent. A re-render needs the audio added again before it replaces the
+published files. (This was learned the hard way: website PR #13 overwrote the
+sound versions with a silent render, restored in the next PR.)
 
 The screens in the video mirror the real app (app.ovioplus.ai). Keep them true:
 if a feature shown here changes in the app, change the video. The WhatsApp
