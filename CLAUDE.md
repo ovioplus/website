@@ -84,8 +84,12 @@ binary is unsigned and macOS kills it). 4.5 Mbps, about 16 MB per language.
 **Correction, same day:** PR #13 replaced the files Ayoub had already
 committed **with sound** (`ff6d145`, about 3 MB each) with my silent re-render.
 I saw the files show as "modified" and pushed on instead of stopping to ask
-why they already existed. Restored his versions and added an "Attiva l'audio"
-button (autoplay must stay muted). Rule: before overwriting a tracked binary,
+why they already existed. Restored his sound and added an "Attiva l'audio"
+button (autoplay must stay muted). His uploads were low resolution (IT
+1024x576, EN 640x368 at 20 fps, about 600 kbps), visibly soft on a desktop,
+so the published files are now a fresh 1920x1080/30 fps render with **his
+original AAC track copied in unchanged** (`video/mux.mjs`); frame timing was
+checked identical to his edit before muxing. Rule: before overwriting a tracked binary,
 check who put it there and what is in it.
 
 `preload="none"` and play-on-visible, so visitors who never scroll there

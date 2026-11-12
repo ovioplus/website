@@ -18,13 +18,17 @@ node stills.mjs it 5 16.5 27.5 41
 node render.mjs it && node render.mjs en
 ```
 
-**Do not copy the render straight over `public/videos/`.** The published files
-have a sound track Ayoub added after rendering (commit `ff6d145`); the render
-here is silent. A re-render needs the audio added again before it replaces the
-published files. (This was learned the hard way: website PR #13 overwrote the
-sound versions with a silent render, restored in the next PR.)
+**The published files have Ayoub's sound track** (added in an editor, commit
+`ff6d145`). Never copy a silent render over them. To publish a new render,
+re-render the picture to the audio's length and copy the audio across
+unchanged with `mux.mjs` (no re-encode of either track):
 
-The screens in the video mirror the real app (app.ovioplus.ai). Keep them true:
-if a feature shown here changes in the app, change the video. The WhatsApp
-booking is shown being entered by staff on purpose; there is no WhatsApp
-integration.
+```
+node mux.mjs info ../public/videos/ovioplus-sabato-sera-it.mp4   # audio length
+node render.mjs it 44.25            # picture only -> out/video-only-it.mp4
+node mux.mjs out/video-only-it.mp4 ../public/videos/ovioplus-sabato-sera-it.mp4 out/final-it.mp4
+```
+
+Keep a copy of the sound source outside the repo: the editor export Ayoub
+uploaded was 1024x576 (IT) and 640x368 at 20 fps (EN), which looked soft on
+desktop, so the published files now pair that audio with a 1920x1080 render.
