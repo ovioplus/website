@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
@@ -21,6 +21,26 @@ export function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // While the menu is open the page behind must not scroll, and any way of
+  // leaving it (a link to an anchor, Escape, growing past `lg`) must close it.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const close = () => setMobileOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && close();
+    const wide = window.matchMedia('(min-width: 1024px)');
+    window.addEventListener('hashchange', close);
+    window.addEventListener('keydown', onKey);
+    wide.addEventListener('change', close);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('hashchange', close);
+      window.removeEventListener('keydown', onKey);
+      wide.removeEventListener('change', close);
+    };
+  }, [mobileOpen]);
 
   // Nav links respect FEATURES toggles; hidden sections are also hidden from nav
   const navLinks = [
@@ -89,65 +109,72 @@ export function Navbar() {
         </nav>
       </motion.header>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] lg:hidden bg-brand-sky-light"
-            style={{ backdropFilter: 'blur(20px)' }}
-          >
-            <div className="container-page flex h-20 items-center justify-between">
-              <Logo variant="icon" size={40} />
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="p-2 rounded-full text-text-primary hover:bg-slate-200"
-                aria-label="Close menu"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <ul className="container-page mt-8 flex flex-col gap-1">
-              {navLinks.map((link, i) => (
-                <motion.li
-                  key={link.href}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
-                  <a
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-4 text-2xl font-display font-medium text-text-primary border-b border-line"
-                  >
-                    {link.label}
-                  </a>
-                </motion.li>
-              ))}
-              <motion.li
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.05 }}
-              >
-                <a
-                  href="https://app.ovioplus.ai/sign-in"
-                  onClick={() => setMobileOpen(false)}
-                  className="block py-4 text-2xl font-display font-medium text-text-primary border-b border-line"
-                >
-                  {t.nav.signIn}
-                </a>
-              </motion.li>
-              <li className="pt-8 flex items-center justify-between">
-                <LanguageToggle />
-                <Link href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary">
-                  {t.nav.bookDemo}
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
+      {/*
+        Always mounted, hidden with CSS when closed. It used to be mounted only
+        while open and faded out with a framer-motion exit animation; if that
+        exit never finished (Safari on iPhone), an invisible full-screen menu
+        stayed on top and caught taps: tapping the homepage video opened
+        "Accedi", its sound button opened "Prenota una demo". `invisible` +
+        `pointer-events-none` + `inert` make a closed menu untouchable whatever
+        any animation does.
+      */}
+      <div
+        className={cn(
+          'fixed inset-0 z-[60] lg:hidden bg-brand-sky-light transition-[opacity,visibility] duration-200',
+          mobileOpen ? 'visible opacity-100' : 'pointer-events-none invisible opacity-0',
         )}
-      </AnimatePresence>
+        style={{ backdropFilter: 'blur(20px)' }}
+        aria-hidden={!mobileOpen}
+        inert={!mobileOpen}
+      >
+        <div className="container-page flex h-20 items-center justify-between">
+          <Logo variant="icon" size={40} />
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="p-2 rounded-full text-text-primary hover:bg-slate-200"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        <ul className="container-page mt-8 flex flex-col gap-1">
+          {navLinks.map((link, i) => (
+            <motion.li
+              key={link.href}
+              initial={false}
+              animate={mobileOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+              transition={{ delay: mobileOpen ? i * 0.05 : 0 }}
+            >
+              <a
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block py-4 text-2xl font-display font-medium text-text-primary border-b border-line"
+              >
+                {link.label}
+              </a>
+            </motion.li>
+          ))}
+          <motion.li
+            initial={false}
+            animate={mobileOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+            transition={{ delay: mobileOpen ? navLinks.length * 0.05 : 0 }}
+          >
+            <a
+              href="https://app.ovioplus.ai/sign-in"
+              onClick={() => setMobileOpen(false)}
+              className="block py-4 text-2xl font-display font-medium text-text-primary border-b border-line"
+            >
+              {t.nav.signIn}
+            </a>
+          </motion.li>
+          <li className="pt-8 flex items-center justify-between">
+            <LanguageToggle />
+            <Link href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary">
+              {t.nav.bookDemo}
+            </Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }

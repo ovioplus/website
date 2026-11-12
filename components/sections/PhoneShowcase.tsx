@@ -53,14 +53,14 @@ export function PhoneShowcase() {
             </h2>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
               {lang === 'it'
-                ? "L'AI capisce frasi imperfette, italianismi, voci sovrapposte. Conferma in 90 secondi netti."
-                : 'The AI understands imperfect phrasing, accents, and overlapping voices. Confirms in under 90 seconds flat.'}
+                ? "L'AI capisce le frasi come le dice la gente, in italiano o in inglese, controlla i tavoli liberi e conferma mentre l'ospite è ancora in linea."
+                : 'The AI understands people the way they actually talk, in Italian or English, checks which tables are free and confirms while the guest is still on the line.'}
             </p>
 
             <div className="space-y-4">
               {[
-                { icon: Phone, label: lang === 'it' ? 'Risposta in < 800ms' : 'Answer in < 800ms' },
-                { icon: MessageCircle, label: lang === 'it' ? 'IT + EN + accenti regionali' : 'IT + EN + regional accents' },
+                { icon: Phone, label: lang === 'it' ? 'Risponde 24 ore su 24' : 'Answers 24/7' },
+                { icon: MessageCircle, label: lang === 'it' ? 'Italiano e inglese' : 'Italian and English' },
                 { icon: Calendar, label: lang === 'it' ? 'Verifica disponibilità live' : 'Live availability check' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-3">

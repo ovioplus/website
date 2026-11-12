@@ -72,11 +72,11 @@ export function Platform() {
       <PhoneFrame>
         <BookingPageMock />
       </PhoneFrame>
-      <FloatBadge className="top-10 right-0 sm:right-6">
+      <FloatBadge className="-top-2 right-0 sm:top-10 sm:right-6">
         <div className="text-[10px] font-medium text-text-muted">{L('Email inviata', 'Email sent')}</div>
         <div className="text-sm font-semibold text-text-primary">{L('Prenotazione confermata ✓', 'Booking confirmed ✓')}</div>
       </FloatBadge>
-      <FloatBadge className="bottom-12 left-0 sm:left-6" delay={0.35}>
+      <FloatBadge className="-bottom-2 left-0 sm:bottom-12 sm:left-6" delay={0.35}>
         <div className="text-[10px] font-medium text-text-muted">{L('Lingue', 'Languages')}</div>
         <div className="font-display text-lg font-semibold text-text-primary">IT · EN</div>
       </FloatBadge>
