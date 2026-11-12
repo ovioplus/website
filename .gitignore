@@ -17,3 +17,7 @@ tsconfig.tsbuildinfo
 # the one CI actually uses. Keep them out.
 pnpm-lock.yaml
 pnpm-workspace.yaml
+
+# video/ render outputs (the published copies live in public/videos)
+video/stills
+video/out

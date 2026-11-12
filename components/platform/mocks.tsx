@@ -136,7 +136,7 @@ export function ServiceMapMock() {
           </div>
           <div className="flex flex-wrap gap-x-3 gap-y-1 text-[9px] text-slate-500">
             <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-amber-500" />{L('Al tavolo', 'Seated')}</span>
-            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-brand-cyan" />{L('In arrivo', 'Arriving')}</span>
+            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-brand-cyan" />{L('Prenotato, non arrivato', 'Booked, not arrived')}</span>
             <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-[#c9a874]" />{L('Libero', 'Free')}</span>
           </div>
         </div>

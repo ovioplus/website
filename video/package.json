@@ -1,0 +1,14 @@
+{
+  "name": "ovioplus-promo-video",
+  "private": true,
+  "type": "module",
+  "description": "Renders the 'Sabato sera' homepage video. Not part of the site build.",
+  "scripts": {
+    "stills": "node stills.mjs",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "mp4-muxer": "5.1.3",
+    "puppeteer-core": "23.11.1"
+  }
+}

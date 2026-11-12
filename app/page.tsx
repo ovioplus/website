@@ -5,6 +5,7 @@ import { Channels } from '@/components/sections/Channels';
 import { PhoneShowcase } from '@/components/sections/PhoneShowcase';
 import { HowItWorks } from '@/components/sections/HowItWorks';
 import { Problem } from '@/components/sections/Problem';
+import { VideoShowcase } from '@/components/sections/VideoShowcase';
 import { Platform } from '@/components/sections/Platform';
 import { Advantages } from '@/components/sections/Advantages';
 import { Clients } from '@/components/sections/Clients';
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Hero />
         <StatStrip />
         <Problem />
+        <VideoShowcase />
         {FEATURES.showClients && <Clients />}
         <Channels />
         <Platform />

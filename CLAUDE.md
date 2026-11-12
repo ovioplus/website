@@ -68,6 +68,25 @@ chmod +x .git/hooks/pre-push
 
 ## Session Log
 
+### 2026-11-12: Homepage video "Sabato sera"
+
+A 43-second muted, captioned story under the problem band (`VideoShowcase`):
+stick-figure Marco missing calls on a full Saturday, then the AI answering,
+the live Service map, a staff-entered WhatsApp booking, Chiedi a Ovio, and the
+14-day trial end card. IT and EN files, picked by the language toggle.
+
+**It is an HTML animation, not footage**: source and render scripts in
+`video/` (own `package.json`, ignored by the site's ESLint and build). It
+renders in the installed Google Chrome and encodes H.264 with WebCodecs plus
+`mp4-muxer`, because ffmpeg could not be used on this machine (the downloaded
+binary is unsigned and macOS kills it). 4.5 Mbps, about 16 MB per language.
+
+`preload="none"` and play-on-visible, so visitors who never scroll there
+download nothing; it pauses off screen and respects reduced motion. Counterpart:
+the video shows platform behaviour as of PR #41 (arrival colours, staff
+WhatsApp entry). If those screens change, re-render. The `mocks.tsx` legend
+was updated to "Prenotato, non arrivato" to match #41 in the same PR.
+
 ### 2026-11-09: Homepage rebuilt around the product, after fixia.it; false claims removed
 
 Ayoub asked for the site to reflect what the app now does, "something like
