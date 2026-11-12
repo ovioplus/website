@@ -98,6 +98,8 @@ export const translations = {
       eyebrow: 'In 40 seconds',
       title1: 'A Saturday night,',
       titleHighlight: 'before and after OvioPlus.',
+      soundOn: 'Turn sound on',
+      soundOff: 'Mute',
       ariaLabel: 'OvioPlus video: a busy Saturday night, missed calls, then the AI answering and the live floor plan.',
     },
     platform: {
@@ -599,6 +601,8 @@ export const translations = {
       eyebrow: 'In 40 secondi',
       title1: 'Un sabato sera,',
       titleHighlight: 'prima e dopo OvioPlus.',
+      soundOn: 'Attiva l’audio',
+      soundOff: 'Disattiva l’audio',
       ariaLabel: 'Video OvioPlus: un sabato sera pieno, chiamate perse, poi l’AI che risponde e la sala in tempo reale.',
     },
     platform: {
