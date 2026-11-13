@@ -42,6 +42,13 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    /* background-clip: text paints only inside the box, and italic glyphs
+       lean past its right edge: the last letter of each line lost its tail
+       ("From the first cal|" on phones). The padding gives them room; clone
+       repeats it on every wrapped line. */
+    padding-right: 0.12em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .text-gradient-light { color: #5CC4F0; }

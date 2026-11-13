@@ -68,6 +68,34 @@ chmod +x .git/hooks/pre-push
 
 ## Session Log
 
+### 2026-11-12 (later): Phone taps opened login / contact; mobile pass
+
+Ayoub on his phone: tapping the video opened "Accedi", its sound button opened
+"Prenota una demo". Those are exactly the last two links of the phone menu,
+stacked where a mid-screen video sits. The menu was mounted only while open
+and removed after a framer-motion exit fade; when that exit never finishes
+(Safari), an invisible full-screen menu stays on top catching taps. Now the
+menu is **always mounted** and closed means `invisible pointer-events-none
+inert`, so no animation state can leave it clickable; it also locks page
+scroll while open and closes on hashchange / Escape / resize past `lg`.
+**Not reproduced on a real iPhone**: no Xcode here for the iOS Simulator, and
+Chrome's emulation closes the old menu correctly. The diagnosis rests on the
+tap targets matching the menu links exactly. If it still happens, retest
+there first.
+
+**Testing the live site from this Mac is unreliable:** a corporate Zscaler
+proxy swaps responses for requests with an iPhone user agent ("Browser
+Isolation" page instead of the CSS), so phone emulation against ovioplus.ai
+renders unstyled and blank. Test phone layouts against a local `next start`.
+
+Also from the phone pass: the video's sound button moves under the video
+below `sm` (it covered the picture); `.text-gradient` gets right padding with
+`box-decoration-break: clone` (background-clip text was cutting the tail off
+italic line endings, "From the first cal|"); the booking-page mock badges no
+longer cover the restaurant name; and the "Natural, fast" section lost
+"< 800ms", "regional accents", "overlapping voices" and "under 90 seconds
+flat", the same unmeasured-claim problem as the old stat strip.
+
 ### 2026-11-12: Homepage video "Sabato sera"
 
 A 43-second muted, captioned story under the problem band (`VideoShowcase`):

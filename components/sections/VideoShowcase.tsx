@@ -61,8 +61,10 @@ export function VideoShowcase() {
             </h2>
           </div>
         </Reveal>
-        <Reveal delay={0.1}>
-          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[1.6rem] border border-white/80 bg-white shadow-[0_40px_100px_-40px_rgba(15,23,42,0.45)]">
+        <Reveal delay={0.1} className="relative mx-auto max-w-5xl">
+          {/* On phones the sound button sits under the video instead of covering
+              the picture; from sm up it floats in the video's top-right corner. */}
+          <div className="relative overflow-hidden rounded-[1.6rem] border border-white/80 bg-white shadow-[0_40px_100px_-40px_rgba(15,23,42,0.45)]">
             <video
               key={lang}
               ref={ref}
@@ -77,16 +79,16 @@ export function VideoShowcase() {
               aria-label={t.video.ariaLabel}
               onVolumeChange={(e) => setMuted(e.currentTarget.muted)}
             />
-            <button
-              type="button"
-              onClick={toggleSound}
-              aria-pressed={!muted}
-              className="absolute top-4 right-4 inline-flex items-center gap-2 rounded-full bg-slate-900/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors hover:bg-slate-900"
-            >
-              {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-              {muted ? t.video.soundOn : t.video.soundOff}
-            </button>
           </div>
+          <button
+            type="button"
+            onClick={toggleSound}
+            aria-pressed={!muted}
+            className="mx-auto mt-4 flex w-fit items-center gap-2 rounded-full bg-slate-900/85 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors hover:bg-slate-900 sm:absolute sm:top-4 sm:right-4 sm:mt-0"
+          >
+            {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+            {muted ? t.video.soundOn : t.video.soundOff}
+          </button>
         </Reveal>
       </div>
     </section>
