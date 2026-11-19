@@ -56,6 +56,7 @@ const itMsgs = {
 export function Contact() {
   const { t, lang } = useLanguage();
   const [status, setStatus] = useState<Status>('idle');
+  const [hp, setHp] = useState('');
   const [form, setForm] = useState<FormState>({
     name: '',
     restaurant: '',
@@ -96,7 +97,7 @@ export function Contact() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, website: hp }),
       });
       if (!res.ok) throw new Error('failed');
       setStatus('success');
@@ -170,6 +171,8 @@ export function Contact() {
                     noValidate
                     className="relative space-y-5"
                   >
+                    {/* Honeypot: invisible to people and screen readers; bots that fill it are ignored server-side. */}
+                    <input type="text" name="website" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
                     <Field
                       name="name"
                       label={t.contact.fieldName}

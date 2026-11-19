@@ -68,6 +68,37 @@ chmod +x .git/hooks/pre-push
 
 ## Session Log
 
+### 2026-11-19: Security audit, website hardening
+
+Ayoub asked for a general security audit of both repos. Website findings were
+abuse and hardening, nothing that leaks data or runs code. Fixed:
+
+- **Next.js 15.5.19 had known advisories** (image optimizer, server actions,
+  cache poisoning): now 15.5.29, `npm audit --omit=dev` clean. Next pins its own
+  postcss 8.4.31, so `overrides.postcss = "$postcss"` forces the patched one.
+- **Forms** (`lib/server/form-guard.ts`): same-origin only, JSON only (a plain
+  HTML form on another site could post to `req.json()`), a hidden `website`
+  honeypot, and an in-memory per-IP limit (5 per 10 min). In-memory is per
+  Vercel instance, so it stops one script, not a botnet; a **Vercel Firewall
+  rate-limit rule on /api/* is the real layer and needs Ayoub in the dashboard.**
+  Subject fields are stripped of CR/LF. On the live site a missing Resend key now
+  fails loudly instead of answering "sent" and dropping the lead into logs.
+- **Newsletter is now double opt-in.** Contact saved as unsubscribed, a signed
+  7-day link (`lib/server/newsletter-token.ts`, HMAC keyed off
+  NEWSLETTER_SECRET or RESEND_API_KEY) confirms it, landing on `/newsletter`.
+  Before, anyone could subscribe any address, and the copy already promised a
+  confirmation email that never existed. **If RESEND_AUDIENCE_ID is not set in
+  Vercel, the form now shows an error instead of silently doing nothing.**
+- **Security headers** in `next.config.mjs`: CSP (self + Google Analytics, incl.
+  doubleclick/google.com for GA4 signals), frame-ancestors none, HSTS, nosniff,
+  Referrer-Policy, Permissions-Policy. `'unsafe-inline'` scripts stay because
+  nonces would make every page dynamic. Verified in a local production build
+  with a dummy GA id: no CSP errors, GA loads only after consent.
+- **Withdrawing analytics consent** now really stops GA: consent denied, `_ga*`
+  cookies deleted, page reloads. Before, GA kept running until a reload.
+
+Platform findings were more serious; see `ovioplus-platform/CLAUDE.md` same date.
+
 ### 2026-11-12 (later): Phone taps opened login / contact; mobile pass
 
 Ayoub on his phone: tapping the video opened "Accedi", its sound button opened

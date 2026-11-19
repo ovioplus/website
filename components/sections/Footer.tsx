@@ -28,6 +28,7 @@ export function Footer() {
   const { t, lang } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
+  const [hp, setHp] = useState('');
 
   const submitNewsletter = async (e: FormEvent) => {
     e.preventDefault();
@@ -37,7 +38,7 @@ export function Footer() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, lang }),
+        body: JSON.stringify({ email, lang, website: hp }),
       });
       if (!res.ok) throw new Error('failed');
       setStatus('success');
@@ -93,6 +94,8 @@ export function Footer() {
                     onSubmit={submitNewsletter}
                     className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-2 bg-white/95 rounded-2xl sm:rounded-full p-2 sm:p-1.5 max-w-md mx-auto lg:mx-0 shadow-lg"
                   >
+{/* Honeypot: invisible to people and screen readers; bots that fill it are ignored server-side. */}
+                    <input type="text" name="website" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
                     <div className="flex items-center gap-2 flex-1 w-full px-2 sm:pl-4 sm:pr-0">
                       <Mail className="w-4 h-4 text-text-muted flex-shrink-0" />
                       <input
