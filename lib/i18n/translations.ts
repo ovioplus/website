@@ -322,8 +322,8 @@ export const translations = {
         placeholder: 'Enter your email',
         cta: 'Subscribe',
         note: 'Unsubscribe anytime. We respect your inbox.',
-        successTitle: 'Thanks, you\'re in!',
-        successBody: 'Check your inbox for a confirmation.',
+        successTitle: 'Almost there!',
+        successBody: 'Click the link we just emailed you to confirm.',
         errorMessage: 'Something went wrong. Please try again.',
       },
       productLinks: {
@@ -825,8 +825,8 @@ export const translations = {
         placeholder: 'La tua email',
         cta: 'Iscriviti',
         note: 'Disiscriviti quando vuoi. Rispettiamo la tua casella.',
-        successTitle: 'Grazie, sei dentro!',
-        successBody: 'Controlla la tua email per la conferma.',
+        successTitle: 'Ci siamo quasi!',
+        successBody: 'Clicca il link che ti abbiamo appena mandato per confermare.',
         errorMessage: 'Qualcosa è andato storto. Riprova.',
       },
       productLinks: {

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { guardForm, isProduction, oneLine } from '@/lib/server/form-guard';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_FIELD_LENGTH = 1000;
@@ -9,11 +10,15 @@ const FROM_ADDRESS = process.env.CONTACT_FROM ?? 'OvioPlus <noreply@ovioplus.com
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const name = (body.name ?? '').toString().trim().slice(0, MAX_FIELD_LENGTH);
-    const restaurant = (body.restaurant ?? '').toString().trim().slice(0, MAX_FIELD_LENGTH);
-    const email = (body.email ?? '').toString().trim().slice(0, MAX_FIELD_LENGTH);
-    const phone = (body.phone ?? '').toString().trim().slice(0, MAX_FIELD_LENGTH);
+    // Same-origin JSON only, honeypot, 5 requests per IP per 10 minutes.
+    const g = await guardForm(req, { name: 'contact', limit: 5, windowMs: 10 * 60_000 });
+    if (!g.ok) return g.response;
+    const body = g.body;
+    // Name and restaurant go into the email subject: one line, no CR/LF.
+    const name = oneLine(body.name, 200);
+    const restaurant = oneLine(body.restaurant, 200);
+    const email = oneLine(body.email, 254);
+    const phone = oneLine(body.phone, 40);
     const message = (body.message ?? '').toString().trim().slice(0, MAX_FIELD_LENGTH * 4);
 
     if (!name || name.length < 2) {
@@ -24,6 +29,13 @@ export async function POST(req: Request) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
+
+    // Live site without a key: fail loudly instead of telling the visitor
+    // "sent" while the lead (and their personal data) only reaches the logs.
+    if (!apiKey && isProduction()) {
+      console.error('[contact] RESEND_API_KEY missing in production');
+      return NextResponse.json({ error: 'send_failed' }, { status: 500 });
+    }
 
     // Dev fallback: log to terminal when no API key is set
     if (!apiKey) {
